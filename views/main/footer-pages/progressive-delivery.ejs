@@ -1,0 +1,1026 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<title>Do Task For Me | Progressive Delivery</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="description" content="Use our Progressive Delivery service and check the progress of your order.">
+
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffbe21">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://www.gstatic.com/" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+	<meta name="robots" content="noindex, nofollow"> -->
+	
+	<style>
+		html:before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+			background-color: rgba(16, 8, 3, 0);
+			z-index: 2
+		}
+
+		@media (min-width:768px) {
+			html:before {
+				display: block
+			}
+		}
+
+		@media (min-width:1024px) {
+			html:before {
+				display: none
+			}
+		}
+
+		.Header {
+			position: sticky;
+			top: 0;
+			z-index: 20;
+			padding: 0 24px;
+			background-color: #2d2d2c
+		}
+
+		.Header {
+			-webkit-box-shadow: 0 15px 40px rgba(16, 8, 3, .08);
+			box-shadow: 0 15px 40px rgba(16, 8, 3, .08)
+		}
+
+		.Header .container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			padding-top: 20px;
+			padding-bottom: 20px
+		}
+
+		@media (min-width:1024px) {
+			.Header .container {
+				-webkit-box-shadow: 0 -1px 0 0 #535353 inset;
+				box-shadow: inset 0 -1px 0 0 #535353
+			}
+		}
+
+		.Header__logo,
+		.Header__logo--white-text {
+			position: relative;
+			max-width: 203px;
+			z-index: 2;
+			display: none
+		}
+
+		@media (min-width:1024px) {
+
+			.Header__logo,
+			.Header__logo--white-text {
+				max-width: 234px
+			}
+		}
+
+		.Header__logo--white-text {
+			display: inline-block
+		}
+
+		.Header__burger {
+			position: relative;
+			width: 24px;
+			height: 19px;
+			background: none;
+			border: 0;
+			cursor: pointer;
+			z-index: 2
+		}
+
+		@media (min-width:1024px) {
+			.Header__burger {
+				display: none
+			}
+		}
+
+		.Header__burger span {
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: #fff;
+			border-radius: 3px;
+			will-change: transform
+		}
+
+		.Header__burger span:first-child {
+			-webkit-transform: translateY(-6px);
+			transform: translateY(-6px)
+		}
+
+		.Header__burger span:last-child {
+			-webkit-transform: translateY(6px);
+			transform: translateY(6px)
+		}
+
+		.Header__menu {
+			visibility: hidden;
+			position: fixed;
+			top: 78px;
+			right: -100%;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+			width: 100%;
+			height: calc(100vh - 78px);
+			padding: 8px 24px 30px;
+			background-color: #fff;
+			overflow-y: auto;
+			-webkit-box-shadow: inset 0 20px 40px -15px rgba(16, 8, 3, .08);
+			box-shadow: inset 0 20px 40px -15px rgba(16, 8, 3, .08);
+			will-change: transform
+		}
+
+		@media (min-width:768px) {
+			.Header__menu {
+				width: 370px;
+				right: -370px;
+				padding: 8px 24px 30px;
+				margin-left: auto
+			}
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu {
+				position: static;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+				-webkit-box-align: end;
+				-ms-flex-align: end;
+				align-items: flex-end;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				background-color: transparent;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				padding: 0;
+				width: auto;
+				height: auto;
+				visibility: visible;
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+				overflow: visible
+			}
+		}
+
+		.Header__menu-list {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			list-style: none
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu-list {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: end;
+				-ms-flex-align: end;
+				align-items: flex-end;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between
+			}
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu-list li a {
+				color: #fff
+			}
+		}
+
+		.Header__menu-list>li {
+			position: relative;
+			margin-bottom: 0
+		}
+
+		.Header__menu-list>li+li {
+			border-top: 1px solid #acacac
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu-list>li+li {
+				margin-left: 15px;
+				border-top: 0
+			}
+		}
+
+		@media (min-width:1200px) {
+			.Header__menu-list>li+li {
+				margin-left: 28px
+			}
+		}
+
+		.Header__menu-list>li.Header__menu-list-item-order {
+			border-top: 0;
+			padding-top: 16px
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu-list>li.Header__menu-list-item-order {
+				display: none
+			}
+		}
+
+		.Header__menu-list>li.Header__menu-list-item-order .btn--order-now {
+			display: inline-block;
+			padding: 12px 28px;
+			width: auto
+		}
+
+		.Header__menu-list a {
+			display: block;
+			font-size: .875rem;
+			font-weight: 600;
+			color: #100803;
+			padding: 16px 0;
+			border-bottom: .125em solid transparent;
+			-webkit-box-shadow: 0 .071em 0 transparent;
+			box-shadow: 0 .071em 0 transparent;
+			text-decoration: none
+		}
+
+		@media (min-width:1024px) {
+			.Header__menu-list a {
+				display: inline;
+				padding: 0
+			}
+		}
+
+		.Header__user-box {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-left: auto
+		}
+
+		@media (min-width:1024px) {
+			.Header__user-box {
+				-webkit-box-pack: end;
+				-ms-flex-pack: end;
+				justify-content: flex-end;
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				margin-left: 7px;
+				padding-left: 8px
+			}
+		}
+
+		@media (min-width:1200px) {
+			.Header__user-box {
+				margin-left: 14px;
+				padding-left: 14px
+			}
+		}
+
+		.Header__user-box .btn--manage-order {
+			white-space: nowrap;
+			padding: 0 0 0 36px;
+			margin-right: 20px;
+			width: 38px;
+			height: 38px;
+			-webkit-box-shadow: 0 0 1px 1px #585655;
+			box-shadow: 0 0 1px 1px #585655;
+			border-radius: 50%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-flex: 0;
+			-ms-flex-positive: 0;
+			flex-grow: 0
+		}
+
+		@media (min-width:1024px) {
+			.Header__user-box .btn--manage-order {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				padding: 0;
+				margin-right: 28px;
+				width: auto;
+				height: auto;
+				border: 0;
+				border-radius: 0;
+				overflow: visible;
+				border-bottom: .125em solid transparent;
+				color: #fff
+			}
+		}
+
+		.Header__user-box .btn--manage-order:before {
+			content: "";
+			width: 17px;
+			height: 17px;
+			margin-right: 10px;
+			background: url(https://domyassignments.com/images/ico_manage-orders.svg) 50% no-repeat;
+			background-size: contain
+		}
+
+		@media (max-width:1024px) {
+			.Header__user-box .btn--manage-order:before {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto
+			}
+		}
+
+		.Header__user-box .btn--order-now {
+			display: none;
+			padding: 12px 28px
+		}
+
+		@media (min-width:1024px) {
+			.Header__user-box .btn--order-now {
+				display: block
+			}
+		}
+
+		body {
+			line-height: 1.4
+		}
+
+		[data-notify-widget] {
+			display: block !important
+		}
+
+		@font-face {
+			font-family: Bebas Neue;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Bebas Neue;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap
+		}
+
+		@font-face {
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap
+		}
+
+		*,
+		:after,
+		:before {
+			margin: 0;
+			padding: 0;
+			outline: none;
+			box-sizing: border-box
+		}
+
+		body,
+		html {
+			-webkit-tap-highlight-color: transparent;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			scroll-behavior: smooth
+		}
+
+		body {
+			background-color: #fff;
+			font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+			color: #100803;
+			line-height: 1.6;
+			font-size: 14px;
+			font-weight: 400;
+			word-wrap: break-word;
+			margin: 0;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-rendering: optimizeLegibility
+		}
+
+		@media (min-width:1024px) {
+			body {
+				line-height: 1.7
+			}
+		}
+
+		img {
+			height: auto;
+			vertical-align: top
+		}
+
+		iframe,
+		img {
+			max-width: 100%
+		}
+
+		.page-wrapper {
+			position: relative
+		}
+
+		.section {
+			padding: 40px 24px
+		}
+
+		@media (min-width:1024px) {
+			.section {
+				padding: 110px 24px
+			}
+		}
+
+		.container {
+			width: 100%
+		}
+
+		@media (min-width:1024px) {
+			.container {
+				max-width: 1220px;
+				margin-left: auto;
+				margin-right: auto
+			}
+		}
+
+		.breadcrumbs .wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			list-style: none;
+			margin-bottom: 18px;
+			padding: 0;
+			font-size: 12px;
+			line-height: 24px;
+			color: #acacac
+		}
+
+		@media (min-width:480px) {
+			.breadcrumbs .wrap {
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				margin-bottom: 24px
+			}
+		}
+
+		.breadcrumbs .wrap li {
+			margin-bottom: .5rem
+		}
+
+		@media (min-width:1024px) {
+			.breadcrumbs .wrap li {
+				margin-bottom: 1rem
+			}
+		}
+
+		.breadcrumbs .wrap li+li {
+			position: relative;
+			margin-left: 56px
+		}
+
+		.breadcrumbs .wrap li+li:before {
+			content: "";
+			width: 1rem;
+			height: 1px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -36px;
+			background-color: #ffb806;
+			margin: auto
+		}
+
+		.breadcrumbs .wrap li>span {
+			white-space: nowrap
+		}
+
+		.breadcrumbs a {
+			color: #fff;
+			border-bottom: .125em solid transparent;
+			-webkit-box-shadow: 0 .071em 0 #585655;
+			box-shadow: 0 .071em 0 #585655;
+			text-decoration: none;
+			white-space: nowrap
+		}
+
+		.h1,
+		h1 {
+			font-family: Bebas Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+			font-size: 40px;
+			line-height: 1.15;
+			font-weight: 400;
+			text-transform: uppercase
+		}
+
+		@media (min-width:1024px) {
+
+			.h1,
+			h1 {
+				font-size: 74px
+			}
+		}
+
+		.btn {
+			display: inline-block;
+			font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 20px;
+			overflow: hidden;
+			position: relative;
+			vertical-align: top;
+			cursor: pointer;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			padding: 14px 48px;
+			border: 0;
+			border-radius: 4px
+		}
+
+		.btn {
+			text-decoration: none
+		}
+
+		.btn--orange {
+			background-color: #ffb806;
+			color: #100803
+		}
+
+		a {
+			color: #100803;
+			text-decoration: none
+		}
+
+		.section-common-page__aside__menu-item a {
+			border-bottom: 1px solid #dedede;
+			text-decoration: none;
+			font-weight: 500
+		}
+
+		.section-top-landing {
+			background-color: #2d2d2c;
+			background-size: 13px, 39px, 20px, 128px;
+			background-repeat: no-repeat;
+			background-position: right -2px top 49px, right -3px top 55px, left 17px bottom 26px, left -54px top 88px;
+			padding-top: 1rem;
+			padding-bottom: 70px;
+			position: relative
+		}
+
+		@media (min-width:1024px) {
+			.section-top-landing {
+				background-position: left -173px top 922px, left -6px top 241px, left -126px top 48px, right 346px top 112px, right 341px top 125px, right -4.5rem top 60px, 0 0;
+				background-size: 433px, 32px, 214px, 26px, 80px, 510px, cover;
+				padding-top: 1.5rem;
+				position: relative;
+				padding-bottom: 112px;
+				min-height: 300px
+			}
+		}
+
+		.section-top-landing:after {
+			content: "";
+			position: absolute;
+			bottom: -23px;
+			right: 0;
+			height: 43px;
+			width: 88px;
+			background: url(https://domyassignments.com/images/ico_dottes.svg) 50%/contain no-repeat
+		}
+
+		@media (min-width:1024px) {
+			.section-top-landing:after {
+				bottom: -5rem;
+				right: 30px;
+				height: 156px;
+				width: 97px;
+				background: url(https://domyassignments.com/images/redesign/decorations/img_circles-yellow.svg) 50%/contain no-repeat;
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg)
+			}
+		}
+
+		.section-top-landing__heading {
+			max-width: 43.1rem;
+			margin: 0 auto;
+			text-align: center
+		}
+
+		.section-top-landing__heading__title {
+			color: #fff
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none
+		}
+
+		ul li {
+			margin-bottom: 1rem
+		}
+
+		.section-common-page {
+			background-color: #fff;
+			padding-top: 32px;
+			margin-top: -85px;
+			position: relative;
+			z-index: 1
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page {
+				padding-top: 0;
+				margin-top: 0;
+				position: static
+			}
+		}
+
+		.section-common-page .container .h1 {
+			margin-bottom: 14px;
+			line-height: 1.1
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page .container .h1 {
+				margin-bottom: 16px
+			}
+		}
+
+		.section-common-page__inner {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-align: start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+			position: relative;
+			z-index: 2
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page__inner {
+				margin-top: -215px;
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap
+			}
+		}
+
+		.section-common-page__main {
+			background-color: #fff;
+			width: 100%;
+			border-radius: 4px
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page__main {
+				padding: 56px;
+				-webkit-box-shadow: 0 15px 40px rgba(16, 8, 3, .08);
+				box-shadow: 0 15px 40px rgba(16, 8, 3, .08)
+			}
+		}
+
+		.section-common-page__aside {
+			background-color: #fff;
+			background-position: 100% 0;
+			background-repeat: no-repeat;
+			background-size: auto;
+			width: 100%;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 15px 40px rgba(16, 8, 3, .08);
+			box-shadow: 0 15px 40px rgba(16, 8, 3, .08);
+			margin-top: 34px;
+			padding: 48px;
+			position: relative
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page__aside {
+				max-width: 311px;
+				margin-left: 28px;
+				margin-top: 0;
+				position: sticky;
+				top: 120px
+			}
+		}
+
+		.section-common-page__aside:before {
+			content: "";
+			display: block;
+			width: 39px;
+			height: 42px;
+			background: url(https://domyassignments.com/images/redesign/legal/img_circles.svg) 0 0/contain no-repeat;
+			position: absolute;
+			right: 9px;
+			top: 73px
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page__aside:before {
+				right: 17px
+			}
+		}
+
+		.section-common-page__aside:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #585655;
+			border-radius: 4px;
+			position: absolute;
+			top: 10px;
+			left: 10px
+		}
+
+		.section-common-page__aside__heading {
+			color: #100803;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 28px;
+			margin-bottom: 16px;
+			position: relative;
+			z-index: 1
+		}
+
+		@media (min-width:1024px) {
+			.section-common-page__aside__heading {
+				font-weight: 600;
+				font-size: 18px
+			}
+		}
+
+		.section-common-page__aside__menu {
+			position: relative;
+			z-index: 1
+		}
+
+		.section-common-page__aside__menu-item {
+			margin-bottom: 12px
+		}
+
+		.section-common-page__aside__menu-item:last-of-type {
+			margin-bottom: 0
+		}
+
+		.section-common-page__aside__menu-item a {
+			color: #222121
+		}
+
+		#CommonPage {
+			min-height: 500px;
+			margin: 0;
+			position: relative
+		}
+
+		@media (max-width: 650px) {
+			.section-common-page {
+			    background-color: #fff;
+			    padding-top: 32px;
+			    margin-top: -40px;
+			    position: relative;
+			    z-index: 1;
+			}
+		}
+
+
+		@media (max-width: 768px) {
+			.section-top-landing {
+			    background-image: none;
+			    margin-top: 99px;
+			}
+		}
+
+
+	</style>
+
+
+	<link href="./css/main/footer-related-links-css/common-pages-9a8b795a.2c739c2c1a725c261975.css" rel="preload" as="style"
+		media="all" onload="this.rel='stylesheet'" />
+	<noscript>
+		<link rel="stylesheet" href="./css/main/footer-related-links-css/common-pages-9a8b795a.2c739c2c1a725c261975.css">
+	</noscript>
+
+	<link href="./css/main/footer-related-links-css/common-pages-9acf4d28.358fa93d82179260cc3c.css" rel="preload" as="style"
+		media="all" onload="this.rel='stylesheet'" />
+	<noscript>
+		<link rel="stylesheet" href="./css/main/footer-related-links-css/common-pages-9acf4d28.358fa93d82179260cc3c.css">
+	</noscript>
+
+	<link href="./css/main/footer-related-links-css/common-pages-b6401908.3ea3f2f2bb925ba477b6.css" rel="preload" as="style"
+		media="all" onload="this.rel='stylesheet'" />
+	<noscript>
+		<link rel="stylesheet" href="./css/main/footer-related-links-css/common-pages-b6401908.3ea3f2f2bb925ba477b6.css">
+	</noscript>
+
+	<link href="./css/main/footer-related-links-css/cookie-dialog.fba66a37a51a1359358b.css" rel="preload" as="style"
+		media="all" onload="this.rel='stylesheet'" />
+	<noscript>
+		<link rel="stylesheet" href="./css/main/footer-related-links-css/cookie-dialog.fba66a37a51a1359358b.css">
+	</noscript>
+
+	<script>
+		window.dataLayer = window.dataLayer || []; dataLayer.push({ 'userId': null, 'event': 'funnel-anonymous', 'paidOrders': null, 'latestOrderId': null }); document.addEventListener('DOMContentLoaded', function () {
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || []; w[l].push({
+					'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+				}); var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+						'http://www.googletagmanager.com/gtm.js?id=' + i + dl + ''; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-TJB7WC');
+		});
+		window['GoogleAnalyticsObject'] = 'ga';
+		window['ga'] = window['ga'] || function () {
+			(window['ga'].q = window['ga'].q || []).push(arguments)
+		};
+	</script>
+	<script>
+		var pageConfig = {};
+		var getEnvironment = 'production';
+	</script>
+	<script>function checkSupport() { var e = document.documentElement, o = new Image; o.onload = o.onerror = function () { isSupported = 2 === o.height, isSupported || e.classList.add("no-webp") }, o.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA" } checkSupport();</script>
+</head>
+
+<body>
+
+	
+<%- include("../../partials/header.ejs") %>
+<%- include("../../partials/whatsapp-contact.ejs") %>  
+<%- include("../../partials/cursor-effect.ejs") %>
+
+
+	<div data-notify-widget class="NotifyWidget-banner"></div>
+
+	<div class="page-wrapper ">
+
+		<!-- HEADER -->
+		
+		<!-- END HEADER -->
+
+		<div class="section section-top-landing ">
+			<div class="container">
+				<div class="section-top-landing__inner">
+					<div class="breadcrumbs">
+						<ul class="wrap clearfix" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a
+									itemprop="item" href="/"><span
+										itemprop="name">Do Task For Me</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span
+									itemprop="name">Progressive Delivery</span>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ul>
+					</div>
+					<div class="section-top-landing__heading">
+						<span class="h1 section-top-landing__heading__title">
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section-common-page">
+			<div class="container">
+				<div class="section-common-page__inner">
+					<main class="section-common-page__main">
+
+						<h1 class="h1">Progressive Delivery</h1>
+						<div id="CommonPage" class="common-page--different__content" data-page="progdeluniq" data-site-id="75"><div class="progd">
+							<p><strong>Progressive Delivery is an outstanding service launched by our company to manage large or complex orders, and to keep clients updated about the progress of work in hand.</strong></p>
+						
+							<h3>The <strong>advantages</strong> are:</h3>
+							<ol>
+								<li>You can have your academic <strong>paper delivered gradually</strong>, as our writer progresses;</li>
+								<li>You do not have to pay the whole amount for your thesis or dissertation at once. Your <strong>payment is broken down</strong> into several affordable installments;</li>
+								<li>You have a <strong>personal manager</strong> responsible for your order, who constantly informs you of the progress of your assignment;</li>
+								<li>We provide you with a <strong>personal schedule</strong> that saves your time, and lets you know exactly when your work will be delivered;</li>
+								<li>We <strong>revise</strong> your paper <strong>free of charge</strong> within 21 days after the first order’s approval.</li>
+							</ol>
+							<p>This method of managing orders was created after a thorough examination of our customers’ needs and the academic writing market in general. Since fraudulent practice has been found within the industry, we want you to feel secure with us.</p>
+						
+							<h3>Progressive Delivery gives you a chance to:</h3>
+							<ul>
+								<li><strong>minimize the risk</strong> of getting a low quality paper;</li>
+								<li><strong>avoid major revisions</strong>, because you receive it stage by stage;</li>
+								<li><strong>avoid investing money</strong> in a paper you cannot observe being completed.</li>
+							</ul>
+						
+							<h3>How much does it <strong>cost</strong> and how can you order it?</h3>
+							<p>Our Progressive Delivery service costs <strong>only 10% more</strong> than the original price of your paper. If you want to include this feature, please contact our Support Team to arrange a payment plan for you.</p>
+						
+							<h3><strong>Limitations</strong>:</h3>
+									<p>Please note there are some limitations to this feature - it is not applicable on orders with deadlines from 8 hours to 3 days and/or a total value of less than $200, but is mandatory for papers with a deadline that exceeds or equals 7-10 days and a total price over $600.</p>
+							
+						</div></div>
+					</main>
+					<%- include("../../partials/footer-links-set-asides.ejs") %>
+				</div>
+			</div>
+		</section>
+
+
+<%- include("../../partials/services-container.ejs") %>
+<%- include("../../partials/footer.ejs") %>
+		
+		<!-- FOOTER -->
+		
+		<!-- END FOOTER -->
+
+
+		<script>
+			var scriptsArray = ["\/js\/cookie-dialog.bcf194b3a41f3dcdf706.js", "#\/js\/common-pages-9a8b795a.4e9bc82985ce2d59ca4d.js", "#\/js\/common-pages-9acf4d28.d5d3f649e94cc5b6a539.js", "\/js\/common-pages-b6401908.5cf01accf0685548b41f.js"];
+
+			var body = document.getElementsByTagName('body')[0];
+			window.addEventListener('load', function () {
+				for (var scriptLink in scriptsArray) {
+					var scriptEl = document.createElement('script');
+					scriptEl.async = true;
+					scriptEl.src = scriptsArray[scriptLink];
+					body.appendChild(scriptEl);
+				}
+			});
+		</script>
+
+		<script>!function (a) { "use strict"; var b = function (b, c, d) { function e(a) { return h.body ? a() : void setTimeout(function () { e(a) }) } function f() { i.addEventListener && i.removeEventListener("load", f), i.media = d || "all" } var g, h = a.document, i = h.createElement("link"); if (c) g = c; else { var j = (h.body || h.getElementsByTagName("head")[0]).childNodes; g = j[j.length - 1] } var k = h.styleSheets; i.rel = "stylesheet", i.href = b, i.media = "only x", e(function () { g.parentNode.insertBefore(i, c ? g : g.nextSibling) }); var l = function (a) { for (var b = i.href, c = k.length; c--;)if (k[c].href === b) return a(); setTimeout(function () { l(a) }) }; return i.addEventListener && i.addEventListener("load", f), i.onloadcssdefined = l, l(f), i }; "undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b }("undefined" != typeof global ? global : this); !function (a) { if (a.loadCSS) { var b = loadCSS.relpreload = {}; if (b.support = function () { try { return a.document.createElement("link").relList.supports("preload") } catch (b) { return !1 } }, b.poly = function () { for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) { var d = b[c]; "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null) } }, !b.support()) { b.poly(); var c = a.setInterval(b.poly, 300); a.addEventListener && a.addEventListener("load", function () { b.poly(), a.clearInterval(c) }), a.attachEvent && a.attachEvent("onload", function () { a.clearInterval(c) }) } } }(this);</script>
+</body>
+</html>

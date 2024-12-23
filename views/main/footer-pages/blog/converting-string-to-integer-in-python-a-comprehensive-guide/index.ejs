@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+
+<!-- Mirrored from domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Jun 2024 14:06:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help, Topics &amp; Tips</title>
+
+  <script>function checkSupport(){var e=document.documentElement,o=new Image;o.onload=o.onerror=function(){isSupported=2===o.height,isSupported||e.classList.add("no-webp")},o.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}checkSupport();</script>
+
+  
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<meta name="description" content="Variables in Python can store different types of data. String represents a text type, integer, float and complex number are numeric types. This article"/>
+<meta name="robots" content="follow, index, noarchive"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help, Topics &amp; Tips" />
+<meta property="og:description" content="Variables in Python can store different types of data. String represents a text type, integer, float and complex number are numeric types. This article" />
+<meta property="og:url" content="https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/" />
+<meta property="og:site_name" content="DoMyAssignments.com Blog: Writing Help, Topics &amp; Tips" />
+<meta property="article:publisher" content="https://www.facebook.com/domyassignmentscom/" />
+<meta property="article:section" content="STEM" />
+<meta property="og:updated_time" content="2024-06-21T04:14:54+00:00" />
+<meta property="og:image" content="https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python.png" />
+<meta property="og:image:secure_url" content="https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python.png" />
+<meta property="og:image:width" content="1792" />
+<meta property="og:image:height" content="1024" />
+<meta property="og:image:alt" content="Converting String to Integer in Python: A Comprehensive Guide" />
+<meta property="og:image:type" content="image/png" />
+<meta property="article:published_time" content="2024-06-14T11:32:52+00:00" />
+<meta property="article:modified_time" content="2024-06-21T04:14:54+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help, Topics &amp; Tips" />
+<meta name="twitter:description" content="Variables in Python can store different types of data. String represents a text type, integer, float and complex number are numeric types. This article" />
+<meta name="twitter:site" content="@@DoMyAssignment_" />
+<meta name="twitter:creator" content="@@DoMyAssignment_" />
+<meta name="twitter:image" content="https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python.png" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Travis Nichols" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="8 minutes" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["EducationalOrganization","Organization"],"@id":"https://domyassignments.com/blog/#organization","name":"DoMyAssignments.com Blog: Writing Help, Topics &amp; Tips","url":"https://domyassignments.com/blog","sameAs":["https://www.facebook.com/domyassignmentscom/","https://twitter.com/@DoMyAssignment_"]},{"@type":"WebSite","@id":"https://domyassignments.com/blog/#website","url":"https://domyassignments.com/blog","name":"DoMyAssignments.com Blog: Writing Help, Topics &amp; Tips","publisher":{"@id":"https://domyassignments.com/blog/#organization"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png","url":"https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png","width":"200","height":"200","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/#webpage","url":"https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/","name":"Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help, Topics &amp; Tips","datePublished":"2024-06-14T11:32:52+00:00","dateModified":"2024-06-21T04:14:54+00:00","isPartOf":{"@id":"https://domyassignments.com/blog/#website"},"primaryImageOfPage":{"@id":"https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://domyassignments.com/blog/author/admin/","name":"Travis Nichols","url":"https://domyassignments.com/blog/author/admin/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/d1c84b15d7463ed4bb23ae6d4fd85c40?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/d1c84b15d7463ed4bb23ae6d4fd85c40?s=96&amp;d=mm&amp;r=g","caption":"Travis Nichols","inLanguage":"en-US"},"worksFor":{"@id":"https://domyassignments.com/blog/#organization"}},{"@type":"BlogPosting","headline":"Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help,","datePublished":"2024-06-14T11:32:52+00:00","dateModified":"2024-06-21T04:14:54+00:00","author":{"@id":"https://domyassignments.com/blog/author/admin/","name":"Travis Nichols"},"publisher":{"@id":"https://domyassignments.com/blog/#organization"},"description":"Variables in Python can store different types of data. String represents a text type, integer, float and complex number are numeric types. This article","name":"Converting String To Integer In Python: A Comprehensive Guide &raquo; DoMyAssignments Blog: Writing Help,","@id":"https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/#richSnippet","isPartOf":{"@id":"https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/#webpage"},"image":{"@id":"https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.minef10.css?ver=6.5.3' media='all' />
+<style id='rank-math-toc-block-style-inline-css'>
+.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") ". ";counter-increment:item}
+
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='domyassignments-style-css' href='../wp-content/themes/domyassignments/style8a54.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='main-css' href='../../css/main68b3.css?ver=1' media='all' />
+<link rel='stylesheet' id='post-ratings-raty-css' href='../wp-content/plugins/post-ratings/assets/jquery.raty6aec.css?ver=3.0' media='all' />
+
+
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/898.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.html?rsd" />
+<meta name="generator" content="WordPress 6.5.3" />
+<link rel='shortlink' href='../indexd255.html?p=898' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embede501.json?url=https%3A%2F%2Fdomyassignments.com%2Fblog%2Fconverting-string-to-integer-in-python-a-comprehensive-guide%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedef23?url=https%3A%2F%2Fdomyassignments.com%2Fblog%2Fconverting-string-to-integer-in-python-a-comprehensive-guide%2F&amp;format=xml" />
+<link rel="canonical" href="index.html" />
+
+</head>
+
+<body class="post-template-default single single-post postid-898 single-format-standard">
+
+<div data-notify-widget class="NotifyWidget-banner"></div>
+
+<div class="page-wrapper  main-wrap">
+  <!-- HEADER -->
+
+  <!-- END HEADER -->
+
+  <section class="section section-blog">
+    <div class="container">
+      <div class="breadcrumbs">
+          <!-- Breadcrumb NavXT 7.3.0 -->
+<span class="home-itemListElement" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="../../index.html"><span itemprop="name"> Do Task For Me</span></a></span><span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="../index.html"><span itemprop="name">Blog</span></a></span><span property="itemListElement" typeof="ListItem"><span property="name">Converting String to Integer in Python: A Comprehensive Guide</span><meta property="position" content="2"></span>      </div>
+
+      <div class="blog--container">
+
+<div class="blog--content">
+  
+<article id="post-898" class="post-898 post type-post status-publish format-standard hentry category-stem">
+
+  
+  <div class="entry-meta">
+    <span class="date">June 14, 2024</span>
+      </div>
+
+  <div class="entry-header">
+        <h1 class="entry-title">Converting String to Integer in Python: A Comprehensive Guide</h1>
+      </div><!-- .entry-header -->
+
+      <div class="entry-content">
+      
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="585" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20585'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png" alt="" class="wp-image-930 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1024x585.png 1024w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-300x171.png 300w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-768x439.png 768w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python-1536x878.png 1536w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Mastering-the-Conversion-from-String-to-Integer-in-Python.png 1792w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2 class="wp-block-heading">Understanding Python Data Types: String and Integer</h2>
+
+
+
+<p>Variables in Python can store different types of data. String represents a text type, integer, float and complex number are numeric types. This article focuses on string and integer data types and, especially, on problematics to convert from string to integer including methods, error handling, practices and tips.</p>
+
+
+
+<p>Firstly, definitions of both types of data should be done. String could be considered as a sequence of character data. Here it is important to point out that single quotes, double quotes, and triple quotes are used in a Python code to generate strings with varying content. In its turn, integer is a sequence of numeric symbols representing negative or positive whole number without decimal.</p>
+
+
+
+<span id="more-898"></span>
+
+
+
+<h2 class="wp-block-heading">Common Methods for String-to-Integer Conversion in Python</h2>
+
+
+
+<p>There are few approaches to convert string to integer:</p>
+
+
+
+<ul>
+<li><em>int()</em> function</li>
+
+
+
+<li><em>eval()</em> function</li>
+
+
+
+<li><em>literal_eval()</em> function</li>
+
+
+
+<li>usage of specialized libraries</li>
+
+
+
+<li>usage of regular expressions (regex)</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">int() function</h3>
+
+
+
+<p>The most popular way to convert string to integer in Python is to use the <em>int()</em> function. This function is a fundamental built-in Python function, which is utilized to convert a given value into an integer. Besides string representing a numeric value, it accepts also floating-point and integer numbers. The syntax of the <em>int()</em> function looks following:&nbsp;</p>
+
+
+
+<ul>
+<li><em>int(x [,base]))</em></li>
+</ul>
+
+
+
+<p><em>x</em> is a value to convert to an integer. <em>base</em> is an optional parameter, which denotes the base of the provided number and is used only when <em>x</em> is a string: default is 10 which corresponds to decimal numbers.</p>
+
+
+
+<p>Examples how to use the <em>int()</em> function is shown in Figure 1, outputs of the example code are presented in Figure 2.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="600" height="222" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20222'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-1.-Example-application-of-int-function.png" alt="" class="wp-image-900 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-1.-Example-application-of-int-function.png 600w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-1.-Example-application-of-int-function-300x111.png 300w" data-sizes="(max-width: 600px) 100vw, 600px" /></figure>
+
+
+
+<p><em>Figure 1. Example application of int() function</em></p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="583" height="173" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20583%20173'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-2.-Outputs-of-example-code-concerning-int-function-application.png" alt="" class="wp-image-902 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-2.-Outputs-of-example-code-concerning-int-function-application.png 583w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-2.-Outputs-of-example-code-concerning-int-function-application-300x89.png 300w" data-sizes="(max-width: 583px) 100vw, 583px" /></figure>
+
+
+
+<p><em>Figure 2. Outputs of example code concerning int() function application</em></p>
+
+
+
+<h3 class="wp-block-heading">eval() function</h3>
+
+
+
+<p>The built-in <em>eval()</em> function allows to assess arbitrary Python expressions based on either string or compiled code. This function is chosen when the dynamic evaluation of Python expressions is needed. It compiles the string into bytecode and interprets it as a Python expression, effectively converting strings to integers. However, the primary disadvantage of the <em>eval()</em> function is its capability to execute arbitrary code, which results sometimes in unexpected outcomes. That is why, besides the universality of this approach, it is the least safe one among others. Thus, it is necessary to validate input data: its type, format and limitations.</p>
+
+
+
+<p>Examples how to use the <em>eval()</em> function is shown in Figure 3, outputs of the example code are presented in Figure 4.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="586" height="198" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20586%20198'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-3.-Example-application-of-eval-function.png" alt="" class="wp-image-904 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-3.-Example-application-of-eval-function.png 586w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-3.-Example-application-of-eval-function-300x101.png 300w" data-sizes="(max-width: 586px) 100vw, 586px" /></figure>
+
+
+
+<p><em>Figure 3. Example application of eval() function</em></p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="610" height="135" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20610%20135'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-4.-Outputs-of-example-code-concerning-eval-function-application.png" alt="" class="wp-image-906 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-4.-Outputs-of-example-code-concerning-eval-function-application.png 610w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-4.-Outputs-of-example-code-concerning-eval-function-application-300x66.png 300w" data-sizes="(max-width: 610px) 100vw, 610px" /></figure>
+
+
+
+<p><em>Figure 4. Outputs of example code concerning eval() function application</em></p>
+
+
+
+<h3 class="wp-block-heading">literal_eval() function</h3>
+
+
+
+<p>The <em>literal_eval()</em> function is a Python feature from the <em>ast</em> module. This module helps Python applications to process trees of the Python abstract syntax grammar. The <em>literal_eval()</em> function assesses in the safe way expression nodes or strings, which contain only strings, numbers, bytes, tuples, dictionaries, lists, sets, Booleans, and None. While it is not the best approach to convert strings to integers, this function allows to do that. Before the usage of the <em>literal_eval()</em> function, the ast module should be imported.&nbsp;</p>
+
+
+
+<p>The primary benefit of <em>literal_eval()</em> compared to above-mentioned functions is its reputation to be the safer choice. In comparison with <em>eval()</em>, the <em>literal_eval()</em> function does not allow to execute arbitrary code. Additionally, it demonstrates better error handling capabilities in contrast with the <em>int()</em> function because it returns more specific exceptions.</p>
+
+
+
+<p>Examples how to use the <em>literal_eval()</em> function is shown in Figure 5, outputs of the example code are presented in Figure 6.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="586" height="143" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20586%20143'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-5.-Example-application-of-literal_eval-function.png" alt="" class="wp-image-908 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-5.-Example-application-of-literal_eval-function.png 586w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-5.-Example-application-of-literal_eval-function-300x73.png 300w" data-sizes="(max-width: 586px) 100vw, 586px" /></figure>
+
+
+
+<p><em>Figure 5. Example application of literal_eval() function</em></p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" width="610" height="58" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20610%2058'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-6.-Outputs-of-example-code-concerning-literal_eval-function-application.png" alt="" class="wp-image-910 lazy" style="width:673px;height:auto" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-6.-Outputs-of-example-code-concerning-literal_eval-function-application.png 610w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-6.-Outputs-of-example-code-concerning-literal_eval-function-application-300x29.png 300w" data-sizes="(max-width: 610px) 100vw, 610px" /></figure>
+
+
+
+<p><em>Figure 6. Outputs of example code concerning literal_eval() function application</em></p>
+
+
+
+<h3 class="wp-block-heading">astype() function from the Numpy library</h3>
+
+
+
+<p>There are different Python libraries, which often provide convenient functions to extract and/ or convert numbers from strings, especially when they are parts of structured data. As an example, the <em>astype()</em> function from the <em>Numpy</em> module could be considered. If data is stored in an array or matrix, this function makes its copy giving an opportunity to select the data type of its elements (for integers the parameter <em>dtype</em> should be equal to &#8216;i&#8217;). The possible weakness here is that the final output is still presented in the form of array or matrix, which requires additional steps to extract certain elements.</p>
+
+
+
+<p>Examples how to use the <em>astype()</em> function is shown in Figure 7, outputs of the example code are presented in Figure 8.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="672" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20672%20200'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-7.-Example-application-of-astype-function.png" alt="" class="wp-image-912 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-7.-Example-application-of-astype-function.png 672w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-7.-Example-application-of-astype-function-300x89.png 300w" data-sizes="(max-width: 672px) 100vw, 672px" /></figure>
+
+
+
+<p><em>Figure 7. Example application of astype() function</em></p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="614" height="69" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20614%2069'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-8.-Outputs-of-example-code-concerning-astype-function-application.png" alt="" class="wp-image-914 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-8.-Outputs-of-example-code-concerning-astype-function-application.png 614w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-8.-Outputs-of-example-code-concerning-astype-function-application-300x34.png 300w" data-sizes="(max-width: 614px) 100vw, 614px" /></figure>
+
+
+
+<p><em>Figure 8. Outputs of example code concerning astype() function application</em></p>
+
+
+
+<h3 class="wp-block-heading">Regular expressions (regex)</h3>
+
+
+
+<p>To parse numbers from complex strings containing numeric and non-numeric characters in Python, the first choice seems to be the usage of regular expressions (Python module <em>re</em>). This approach allows to search within the string for numeric symbols or numbers with the help of specific number patterns and then extract and convert them to integers. The main challenge here is to build an appropriate pattern, which could strongly depend on the input data. Also it should be mentioned that to convert extracted string values the usage of such a function as, for example, <em>int()</em> is required additionally.</p>
+
+
+
+<p>Examples how to use a regular expression is shown in Figure 9, outputs of the example code are presented in Figure 10.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="653" height="238" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20653%20238'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-9.-Example-application-of-a-regular-expression-1.png" alt="" class="wp-image-918 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-9.-Example-application-of-a-regular-expression-1.png 653w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-9.-Example-application-of-a-regular-expression-1-300x109.png 300w" data-sizes="(max-width: 653px) 100vw, 653px" /></figure>
+
+
+
+<p><em>Figure 9. Example application of a regular expression</em></p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="648" height="88" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20648%2088'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-10.-Outputs-of-example-code-concerning-regular-expression-application.png" alt="" class="wp-image-920 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-10.-Outputs-of-example-code-concerning-regular-expression-application.png 648w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-10.-Outputs-of-example-code-concerning-regular-expression-application-300x41.png 300w" data-sizes="(max-width: 648px) 100vw, 648px" /></figure>
+
+
+
+<p><em>Figure 10. Outputs of example code concerning regular expression application</em></p>
+
+
+
+<h2 class="wp-block-heading">Tips when Converting Strings to Integers</h2>
+
+
+
+<p>There are few typical tips, which should be taken in mind when converting strings to integers. Firstly, a string value should correspond exactly to an integer value. It means that the presence of any non-numeric characters will return an error, for example: <strong>int(&#8217;17a&#8217;)</strong>. Of course, an exception here is a space (e.g. <strong>int(&#8216;&nbsp; 17a &nbsp; &#8216;</strong>)): it does not impact on the final output. This exception concerns all above-mentioned functions. Secondly, if there are zeros in the beginning of numeric string value (e.g. <strong>&#8216;00017&#8217;</strong>), the <em>int() </em>function deletes them automatically when converting to an integer value (the output will be <strong>17</strong>). In cases of other discussed functions such a situation will highly likely return an error. Thirdly, the often mistake is that float numbers are confused with integer numbers, although they are two different types of data. For example, the conversion of a float number by using the <em>int()</em> function returns an error. That is why in such a case, before getting an integer value, it should be a step to convert a string value to a floating-point number.</p>
+
+
+
+<h2 class="wp-block-heading">Error Handling During Conversion</h2>
+
+
+
+<p>Finally, two ways to handle errors during conversion should be discussed.</p>
+
+
+
+<h3 class="wp-block-heading">isdigit() function</h3>
+
+
+
+<p>The first way is to use the <em>isdigit()</em> function to validate whether a string contains only numeric symbols or not. If this function returns True, then the usage of such a function like <em>int()</em> will not produce any errors. Nevertheless, the presence of a space symbol in a string will push the <em>isdigit() </em>function to return False. Example of the <em>isdigit()</em> function usage together output is shown in Figure 11.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="592" height="163" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20592%20163'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-11.-Example-application-of-isdigit-function-including-output.png" alt="" class="wp-image-922 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-11.-Example-application-of-isdigit-function-including-output.png 592w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-11.-Example-application-of-isdigit-function-including-output-300x83.png 300w" data-sizes="(max-width: 592px) 100vw, 592px" /></figure>
+
+
+
+<p><em>Figure 11. Example application of </em><em>isdigit()</em> <em>function including output</em></p>
+
+
+
+<h3 class="wp-block-heading">try-except block</h3>
+
+
+
+<p>Another way is to apply a try-except block to catch errors, which could arise because of inappropriate string input when converting to an integer number. In comparison with the first option, this approach is more universal and errors depend only on used functions (and not on an inputted string). Example of the try-except block usage together output is shown in Figure 12.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="591" height="164" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20591%20164'%3E%3C/svg%3E" data-src="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-12.-Example-application-of-try-expect-block-including-output.png" alt="" class="wp-image-924 lazy" data-srcset="https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-12.-Example-application-of-try-expect-block-including-output.png 591w, https://domyassignments.com/blog/wp-content/uploads/2024/05/Figure-12.-Example-application-of-try-expect-block-including-output-300x83.png 300w" data-sizes="(max-width: 591px) 100vw, 591px" /></figure>
+
+
+
+<p><em>Figure 12. Example application of </em><em>try-expect block</em><em> including output</em></p>
+
+
+
+<h2 class="wp-block-heading">FAQ</h2>
+
+
+
+<h3 class="wp-block-heading">How do I convert a string to an integer in Python?</h3>
+
+
+
+<p>There are several approaches to convert a string to an integer in Python.</p>
+
+
+
+<p>The basic one is the <em>int()</em> function, which converts a given value into an integer. Its input values should be a numeric string, which will convert to the corresponding integer value.</p>
+
+
+
+<p>The second option is the <em>eval()</em> function, which evaluates arbitrary Python expressions. It makes a dynamic evaluation of Python expressions together with converting strings to integers. However, as <em>eval()</em> can execute arbitrary code, it may lead to unexpected results – this fact requires special attention.</p>
+
+
+
+<p>The third approach is the <em>literal_eval()</em> function from the <em>ast</em> module. This function evaluates safely expression nodes or strings containing only specific data types, such as strings, numbers, tuples, lists, dictionaries, sets, Booleans, and None. Although the <em>literal_eval()</em> function was not created for the purpose of string-to-integer conversion, it could be used for that.</p>
+
+
+
+<p>There are different Python libraries, which could help to make a conversion from strings to integers. As an example, the <em>astype()</em> function from the <em>Numpy</em> module could be considered, which is useful especially for structured data scenarios.</p>
+
+
+
+<p>The last popular option is regular expressions, which can be used to parse numbers from complex strings consisting of numeric and non-numeric characters. However, building appropriate patterns could be associated with a separate challenge.</p>
+
+
+
+<h3 class="wp-block-heading">What are common mistakes to avoid in string-to-int conversion?</h3>
+
+
+
+<p>There are typical mistakes, which should be avoided when converting strings to integers in Python and, as a consequence, will ensure accurate and error-free conversion.</p>
+
+
+
+<p>Firstly, the exact correspondence should be guaranteed. It means that a string value should precisely represent an integer value. Any presence of non-numeric symbols could cause an error.</p>
+
+
+
+<p>Secondly, a special attention should be paid on zeros situated in the beginning of a numeric string value. In case of the <em>int()</em> function, these zeros will be removed automatically during the conversion process. However, when using another option to convert strings to integers, unexpected results including errors could arise.</p>
+
+
+
+<p>Thirdly, the difference between float and integer data types should be remembered. For example, an attempt to convert a float number to an integer one using the <em>int()</em> function will cause an error. Thus, it is important to process float numbers separately: first of all, it is necessary to convert such string values to a floating-point number and only then to integer ones.</p>
+
+
+
+<p>Fourthly, each input data should be validated before performing the conversion. It will ensure that this data corresponds to the expected format and constraints. The validation consists of checking the data type, format, and any limitations, which could appear by the selected conversion approach.</p>
+
+
+
+<p>Additionally, special attention should be paid to the <em>eval()</em> function. While it evaluates Python expressions dynamically, there are risks because of its ability to execute arbitrary code. Therefore, it is necessary to verify input data to minimize such risks.</p>
+
+
+
+<p>Only usage of best practice and avoidance of above-mentioned mistakes could ensure accurate and reliable conversion of strings to integers in Python.</p>
+
+<div class="post-ratings" data-post="898">
+	<div class="rating" data-post="363" data-rating="4" data-readonly="0" style="cursor: pointer;"><i data-alt="1" class="star-on-png" title="bad"></i>&nbsp;<i data-alt="2" class="star-on-png" title="poor"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-on-png" title="good"></i>&nbsp;<i data-alt="5" class="star-off-png" title="gorgeous"></i><input name="score" type="hidden" value="4"></div>
+	
+
+	<div class="rating-meta">
+		<strong>0.00</strong> avg. rating (<strong>0</strong>% score) - <strong class="votes">0</strong> votes	</div>
+
+</div>
+          </div>
+  
+  <div class="entry-category">
+    <div>
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">Posted by Travis Nichols in</span> <a href="../category/stem/index.html" rel="category tag">STEM</a>.     </div>
+    </div>
+
+</article><!-- #post -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../effective-techniques-to-end-python-programs/index.html" rel="prev"><span class="meta-nav" aria-hidden="true">Previous post</span> <span class="screen-reader-text"></span> <span class="post-title">Effective Techniques to End Python Programs</span></a></div></div>
+	</nav></div>
+
+<div class="blog--sidebar">
+	<section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://domyassignments.com/blog/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Recent Posts</h2>
+		<ul>
+											<li>
+					<a href="index.html" aria-current="page">Converting String to Integer in Python: A Comprehensive Guide</a>
+									</li>
+											<li>
+					<a href="../effective-techniques-to-end-python-programs/index.html">Effective Techniques to End Python Programs</a>
+									</li>
+											<li>
+					<a href="../should-students-have-homework/index.html">Why Should Students Have Homework? Pros and Cons of Academic Assignments</a>
+									</li>
+											<li>
+					<a href="../how-to-use-chatgpt-to-write-code/index.html">How To Use ChatGPT To Write Code</a>
+									</li>
+											<li>
+					<a href="../implementing-google-java-coding-style-in-your-projects/index.html">Introduction to Google Java Coding Style</a>
+									</li>
+					</ul>
+
+		</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-7"><a href="../category/problem-solving/index.html">Problem Solving</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="../category/stem/index.html">STEM</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="../category/student-life/index.html">Student Life</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="../category/topics/index.html">Topics</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="../category/writing-tips/index.html">Writing Tips</a>
+</li>
+			</ul>
+
+			</section></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-cta ">
+  <div class="container" data-observed-bg>
+    <h2 class="h2 cta__title">Rely on our help anytime</h2>
+    <div class="cta__text">
+      <p class="cta__subtitle">Let us find a specialist for any of your assignments</p>
+      <a href="../../dashboard/inquiry/index.html" class="btn btn--orange">Get free quote</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-services-links">
+  <div class="container">
+	  <div class="services-links__blocks">
+		  <div class="services-links__block">
+			  <div class="h3 services-links__header">
+				  STEM assignments
+			  </div>
+			  <ul class="services-links__list list--clean">
+				  <li><a href="../../do-my-programming-homework.html">Programming homework help</a></li>
+				  <li><a href="../../do-my-java-homework.html">JAVA homework help</a></li>
+				  <li><a href="../../python-homework-help.html">Python homework help</a></li>
+				  <li><a href="../../do-my-matlab-homework.html">MATLAB homework help</a></li>
+				  <li><a href="../../computer-science.html">Computer science homework help</a></li>
+				  <li><a href="../../php-homework-help.html">PHP homework help</a></li>
+				  <li><a href="../../javascript-homework-help.html">Javascript assignment help</a></li>
+				  <li><a href="../../engineering-assignment-help.html">Engineering assignment help</a></li>
+				  <li><a href="../../html-homework-help.html">HTML assignment help</a></li>
+				  <li><a href="../../c-plus-plus-homework-help.html">C++ assignment help</a></li>
+				  <li><a href="../../do-my-calculus-homework.html">Calculus homework help</a></li>
+				  <li><a href="../../do-my-math-homework.html">Do my math homework</a></li>
+				  <li><a href="../../physics-help.html">Physics homework help</a></li>
+				  <li><a href="../../biology.html">Biology homework help</a></li>
+				  <li><a href="../../chemistry-homework.html">Chemistry homework help</a></li>
+				  <li><a href="../../c-sharp-homework-help.html">C# assignment help</a></li>
+				  <li><a href="../../database-homework-help.html">DataBase assignment help</a></li>
+				  <li><a href="../../sql-homework-help.html">SQL assignment help</a></li>
+					<li><a href="../../r-studio-homework-help.html">R Studio homework help</a></li>
+					<li><a href="../../data-science-homework-help.html">Data Science homework help</a></li>
+					<li><a href="../../excel-homework-help.html">Excel homework help</a></li>
+					<li><a href="../../take-my-exam-for-me.html">Do My Exam for me</a></li>
+			  </ul>
+		  </div>
+		  <div class="services-links__block">
+			  <div class="h3 services-links__header">
+				  Academic writing
+			  </div>
+			  <ul class="services-links__list list--clean">
+				  <li><a href="../../service.html">Assignment writing service</a></li>
+				  <li><a href="../../for-sale.html">Assignments for money</a></li>
+				  <li><a href="../../pay-for-homework-help.html">Pay for homework help</a></li>
+				  <li><a href="../../college-assignment-help.html">College assignments help</a></li>
+				  <li><a href="../../editing-service.html">Assignment editing</a></li>
+				  <li><a href="../../english.html">English homework help</a></li>
+				  <li><a href="../../psychology.html">Psychology homework help</a></li>
+				  <li><a href="../../mba-assignment-help.html">MBA assignment help</a></li>
+				  <li><a href="../../buy.html">Buy assignment</a></li>
+				  <li><a href="../../business.html">Business assignment help</a></li>
+				  <li><a href="../../economics.html">Economics homework help</a></li>
+				  <li><a href="../../accounting-help.html">Accounting homework help</a></li>
+				  <li><a href="../../do-my-statistics-homework.html">Statistics homework help</a></li>
+				  <li><a href="../../history-help.html">History homework help</a></li>
+				  <li><a href="../../nursing.html">Nursing assignment help</a></li>
+				  <li><a href="../../do-my-coursework.html">Write my coursework</a></li>
+				  <li><a href="../../law-assignment-help.html">Law assignment help</a></li>
+				  <li><a href="../../finance-assignment-help.html">Finance homework help</a></li>
+			  </ul>
+		  </div>
+	  </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<!-- END FOOTER -->
+<script>!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this); !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);</script>
+
+
+<script id="post-ratings-js-extra">
+var post_ratings = {"ajaxURL":"https:\/\/domyassignments.com\/blog\/wp-admin\/admin-ajax.php","nonce":"ae1873735e","path":"https:\/\/domyassignments.com\/blog\/wp-content\/plugins\/post-ratings\/assets\/images\/","number":"5"};
+</script>
+
+
+
+<script defer src="../wp-content/cache/autoptimize/js/autoptimize_74cdc99a60a4c679b5ea0b4a6b68a265.js"></script><script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+
+<!-- Mirrored from domyassignments.com/blog/converting-string-to-integer-in-python-a-comprehensive-guide/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Jun 2024 14:06:20 GMT -->
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 56/166 objects using Redis
+Page Caching using Disk 
+Lazy Loading
+Database Caching 8/19 queries in 0.012 seconds using Disk
+
+Served from: domyassignments.com @ 2024-06-22 14:07:02 by W3 Total Cache
+-->

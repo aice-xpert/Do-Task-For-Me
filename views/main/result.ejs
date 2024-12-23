@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do My Assignment | Results</title>
+    <link rel="stylesheet" href="./css/main/result.css">
+
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .message-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #4CAF50;
+            display: none;
+            z-index: 1500;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4CAF50;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payment Details</h1>
+        <p>Type of Assignment: <%= assignmentType %></p>
+        <p>Exact Deadline: <%= exactDeadline %></p>
+        <p>Email: <%= email %></p>
+        <p>WhatsApp Number: <%= whatsapp %></p>
+        <p>Well Commented Code: <%= wellCommentedCode %></p>
+        <p>Viva Preparation: <%= vivaPreparation %></p>
+        <p>No Open Source: <%= noOpenSource %></p>
+        <p>Programming Language: <%= programmingLanguage %></p>
+        <p>Web Development Type: <%= webDevelopmentType %></p>
+        <p>Full Stack Framework: <%= fullStackFramework %></p>
+        <p>Top Programmer: <%= topProgrammer %></p>
+        <p>Total Cost: <b>Our team will contact you for the price</b></p>
+        <p>File Url: <%= fileUrl %></p>
+    </div>
+
+    <!-- Progress bar container -->
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Overlay and message box for login/signup message -->
+    <div class="overlay" id="overlay">
+        <div class="message-box">
+            <h2>First "Authorise" yourself before doing any payment</h2>
+        </div>
+    </div>
+
+
+    <script>
+    
+        function move() {
+            var elem = document.getElementById("progressBar");
+            var width = 1;
+            var id = setInterval(frame, 20);
+
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } 
+                
+                else {
+                    width++;
+                    elem.style.width = width + "%";
+                }
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'flex';
+
+            move();
+
+            setTimeout(function() {
+                overlay.style.display = 'none';
+                document.getElementById('progressContainer').style.display = 'block';
+                
+                setTimeout(function() {
+                    window.location.href = '/login-user';
+
+                }, 2000);
+
+            }, 3000);
+
+        });
+        
+    </script>
+
+</body>
+</html>

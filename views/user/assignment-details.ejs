@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+    <title>Assignment Details</title>
+
+    
+    <style>
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            animation: scaleUp 1s ease-in-out;
+        }
+
+        .card p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card p strong {
+            color: #333;
+        }
+
+        .whatsapp-button2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: bounceIn 1s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 20px;
+            animation: rotate 1s infinite linear;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .whatsapp-btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Assignment Details</h1>
+        
+        <div class="card">
+            <p><strong>Task ID:</strong> <%= assignment._id %></p>
+        
+            <p><strong>Assignment Type:</strong> <%= assignment.assignmentType %></p>
+        
+            <p><strong>Status:</strong> <%= assignment.status %></p>
+        
+            <p><strong>Payment Status:</strong> <%= assignment.payment_status%></p>
+        
+            <p><strong>Exact Deadline:</strong> <%= new Date(assignment.exactDeadline).toLocaleString() %></p>
+        
+            <p><strong>Additional Details:</strong> <%= assignment.additionalDetails %></p>
+        
+            <p><strong>Submitted On:</strong> <%= new Date(assignment.createdAt).toLocaleString() %></p>
+        
+            <p><strong>Email:</strong> <%= assignment.email %></p>
+            
+            <p><strong>WhatsApp Number:</strong> <%= assignment.whatsapp %></p>
+            
+            <p><strong>Well Commented Code:</strong> <%= assignment.wellCommentedCode %></p>
+        
+            <p><strong>Viva Preparation:</strong> <%= assignment.vivaPreparation %></p>
+        
+            <p><strong>No Open Source:</strong> <%= assignment.noOpenSource %></p>
+        
+            <p><strong>Programming Language:</strong> <%= assignment.programmingLanguage %></p>
+        
+            <p><strong>Web Development Type:</strong> <%= assignment.webDevelopmentType %></p>
+        
+            <p><strong>Full Stack Framework:</strong> <%= assignment.fullStackFramework %></p>
+        
+            <p><strong>Top Programmer:</strong> <%= assignment.topProgrammer %></p>
+        
+            <p><strong>File URL:</strong> <a href="<%= assignment.fileUrl %>" target="_blank">View File</a></p>
+        
+        </div>
+            
+           <a id="whatsapp-link" target="_blank" style="text-decoration: none;">
+                <button class="whatsapp-button" style="display: flex; align-items: center; padding: 10px; background-color: #25D366; color: white; border: none; border-radius: 5px;align-items: center; cursor: pointer;">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Message me on WhatsApp
+                </button>
+            </a>
+            
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textElement = document.querySelector('.typing-effect');
+            const text = textElement.textContent;
+            textElement.textContent = '';
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    textElement.textContent += text[index++];
+                    setTimeout(type, 100);
+                }
+            }
+
+            type();
+    
+        });
+
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const assignment = {
+                _id: '<%= assignment._id %>',
+                assignmentType: '<%= assignment.assignmentType %>',
+                status: '<%= assignment.status %>',
+                exactDeadline: '<%= assignment.exactDeadline %>',
+                additionalDetails: '<%= assignment.additionalDetails %>',
+                createdAt: '<%= assignment.createdAt %>',
+                email: '<%= assignment.email %>',
+                whatsapp: '<%= assignment.whatsapp %>',
+                wellCommentedCode: '<%= assignment.wellCommentedCode %>',
+                vivaPreparation: '<%= assignment.vivaPreparation %>',
+                noOpenSource: '<%= assignment.noOpenSource %>',
+                programmingLanguage: '<%= assignment.programmingLanguage %>'
+            };
+
+            const message = `*Hi, I have a query about the assignment. Here are the details:*\n\n` +
+                            `*Task ID:* *${assignment._id}*\n` +
+                            `*Assignment Type:* *${assignment.assignmentType}*\n` +
+                            `*Status:* ${assignment.status}\n` +
+                            `*Exact Deadline:* ${assignment.exactDeadline}\n` +
+                            `*Additional Details:* ${assignment.additionalDetails}\n` +
+                            `*Submitted On:* ${new Date(assignment.createdAt).toLocaleString()}\n` +
+                            `*Email:* ${assignment.email}\n` +
+                            `*Well Commented Code:* ${assignment.wellCommentedCode}\n` +
+                            `*Viva Preparation:* ${assignment.vivaPreparation}\n` +
+                            `*No Open Source:* ${assignment.noOpenSource}\n` +
+                            `*Programming Language:* ${assignment.programmingLanguage}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappLink = `https://wa.me/+447769108567?text=${encodedMessage}`;
+            document.getElementById('whatsapp-link').setAttribute('href', whatsappLink);
+        });
+    
+    </script>
+
+</body>
+</html>
+

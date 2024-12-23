@@ -1,0 +1,239 @@
+<style>
+  @media (min-width: 900px) {
+    #beemari {
+      position: relative;
+      left: 20px;
+    }
+
+    .section-top-experts .writers {
+      position: relative;
+      left: -19px;
+    }
+
+    .section-top-experts__banner {
+      border: none;
+      max-width: 304px;
+      -ms-flex-item-align: start;
+      position: relative;
+      top: 75px;
+    }
+
+    .section-top-experts__heading.visible {
+      opacity: 1;
+      margin-left: 218px;
+      text-align: left;
+      transform: translateX(0);
+    }
+
+    .splide__slide1 {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      position: relative;
+      left: 462px;
+    }
+
+    .section-top-experts__inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-column-gap: 50px;
+      -webkit-column-gap: 50px;
+      -moz-column-gap: 50px;
+      column-gap: 50px;
+      width: 115%;
+      position: relative;
+      right: 197px;
+    }
+
+  }
+
+  #TalhaK {
+    background-color: #f8f8f8;
+    height: 410px;
+  }
+
+  @media (max-width: 500px) {
+    #TalhaK {
+      background-color: #f8f8f8;
+      height: 370px;
+    }
+  }
+
+  .section-top-experts__heading {
+    opacity: 0;
+    /* Start hidden */
+    transform: translateX(100px);
+    /* Start from the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .section-top-experts__heading.visible {
+    opacity: 1;
+    /* Fade in */
+    transform: translateX(0);
+    /* Move to original position */
+  }
+
+  .section-top-experts__banner {
+    opacity: 0;
+    /* Start hidden */
+    transform: translateX(100px);
+    /* Start from the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .section-top-experts__banner.visible {
+    opacity: 1;
+    /* Fade in */
+    transform: translateX(0);
+    /* Move to original position */
+  }
+
+  .writers__item .splide__slide1 {
+    opacity: 0;
+    /* Start hidden */
+    transform: translateX(100px);
+    /* Start from the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .writers__item .splide__slide1.visible {
+    opacity: 1;
+    /* Fade in */
+    transform: translateX(0);
+    /* Move to original position */
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.querySelector('.section-top-experts__heading');
+
+    const options = {
+      root: null,
+      threshold: 0.9 // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heading.classList.add('visible');
+          observer.unobserve(heading); // Stop observing after the animation is triggered
+        }
+      });
+    }, options);
+
+    observer.observe(heading);
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.querySelector('.writers__item .splide__slide1');
+
+    const options = {
+      root: null,
+      threshold: 0.9 // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heading.classList.add('visible');
+          observer.unobserve(heading); // Stop observing after the animation is triggered
+        }
+      });
+    }, options);
+
+    observer.observe(heading);
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.querySelector('.section-top-experts__banner');
+
+    const options = {
+      root: null,
+      threshold: 0.9 // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heading.classList.add('visible');
+          observer.unobserve(heading); // Stop observing after the animation is triggered
+        }
+      });
+    }, options);
+
+    observer.observe(heading);
+  });
+</script>
+<div class="section section-top-experts section--grey-secondary" id="TalhaK">
+  <div class="container">
+    <div class="section-top-experts__inner">
+      <div class="section-top-experts__heading">
+        <h2>Get Your Work Done By Our STEM &amp; Coding Experts</h2>
+        <p class="section__subtitle">Each of our experts is highly experienced and qualified to deal with any tasks
+          in their field. All you need to do is ask them for assistance.</p>
+      </div>
+      <div class="section-top-experts__banner">
+        <img src="/images/main-landing-page-images/redesign/home/section-top-experts/ico_star.svg" width="34"
+          height="44" alt="" loading="lazy">
+        <p>15 years of experience in the STEM assignments and academic writing</p>
+      </div>
+
+      <div class="section-top-experts__slide splide is-initialized" data-writers="" id="splide01" role="region">
+        <div class="splide__track" id="splide01-track">
+          <div class="writers splide__list" id="splide01-list">
+            <div class="writers__item splide__slide1" id="splide01-slide01" style="display: none;">
+              <img src="/images/main-landing-page-images/redesign/home/section-top-experts/img_Henry.webp" width="287"
+                height="287" loading="lazy" alt="representative writer" class="writers__item__img">
+              <div class="writers__item__top">
+                <span class="writers__item__name">Henry</span>
+                <img src="/images/main-landing-page-images/redesign/home/section-top-experts/ico_starts-points.svg"
+                  alt="writer's points" class="writers__item__stars">
+                <span class="writers__item__points">5.0</span>
+              </div>
+              <p class="writers__item__text" id="beemari"> A physicist who understands thermodynamics and has gripped on
+                the advanced topics as well.</p>
+            </div>
+            <div class="writers__item splide__slide1" id="splide01-slide02" style="display: none;">
+              <img src="/images/main-landing-page-images/redesign/home/section-top-experts/img_Carl.webp" width="287"
+                height="287" loading="lazy" alt="representative writer" class="writers__item__img">
+              <div class="writers__item__top">
+                <span class="writers__item__name">Carl</span>
+                <img src="/images/main-landing-page-images/redesign/home/section-top-experts/ico_starts-points.svg"
+                  alt="writer's points" class="writers__item__stars">
+                <span class="writers__item__points">4.7</span>
+              </div>
+              <p class="writers__item__text">A programmer who codes in C++ and Python. He completes each
+                task with great attention.</p>
+            </div>
+            <div class="writers__item splide__slide1" id="splide01-slide03" style="display: none;">
+              <img src="/images/main-landing-page-images/redesign/home/section-top-experts/img_Rachel.webp" width="287"
+                height="287" loading="lazy" alt="representative writer" class="writers__item__img">
+              <div class="writers__item__top">
+                <span class="writers__item__name">Rachel</span>
+                <img src="/images/main-landing-page-images/redesign/home/section-top-experts/ico_starts-points.svg"
+                  alt="writer's points" class="writers__item__stars">
+                <span class="writers__item__points">4.9</span>
+              </div>
+              <p class="writers__item__text">A microbiologist, she can help with a basic assignment about
+                plant cells, as well as with advanced tasks.</p>
+            </div>
+
+            <div class="writers__item spwriters__item splide__slide1" id="splide01-slide04" style="display: none;">
+              <img src="/images/main-landing-page-images/redesign/home/section-top-experts/img_heart.png" width="287"
+                height="287" alt="" loading="lazy" class="writers__item__img">
+              <a href="/form" class="btn btn--orange">Find your coding expert</a>
+              <a href="/writers" class="btn btn--white-orange">More about our experts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

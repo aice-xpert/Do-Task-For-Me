@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Task for Me | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
+
+    <style>
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .navbar:hover {
+            background-color: #34495e;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .navbar .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navbar .nav-links li {
+            display: inline;
+        }
+        
+        .navbar .nav-links li a, .contact-btn {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar .nav-links li a:hover, .contact-btn:hover {
+            color: #f39c12;
+        }
+        
+        .contact-btn {
+            background-color: #e74c3c;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .main-content {
+            padding: 2rem;
+            background-color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .main-content:hover {
+            background-color: #d5d8dc;
+        }
+        
+        .form-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .form-container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .form-container h1 {
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.5rem;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #3498db;
+        }
+        
+        .form-group textarea {
+            resize: none;
+        }
+        
+        .form-group-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .form-group-row .form-group {
+            flex: 1;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        
+        .button-group button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #bdc3c7;
+            background-color: #ecf0f1;
+            cursor: pointer;
+            border-radius: 5px;
+            flex: 1;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .button-group button.active, .button-group button:hover {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        
+        .price-info {
+            margin-top: 1rem;
+            color: green;
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+        
+        .extra-options {
+            margin-top: 1rem;
+        }
+        
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .submit-btn {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1e8449;
+            transform: translateY(-2px);
+        }
+        
+        #taskSizeDetails {
+            white-space: pre-line; /* Preserves line breaks */
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="/images/logo.jpg" alt="Company Logo"></a>
+            <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="/work">How We Work</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+            <a href="/login-user" class="contact-btn">Manage Orders</a>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="main-content">
+        <div class="form-container">
+            <form id="assignmentForm" action="/submit-form" method="POST" enctype="multipart/form-data">
+                <h1>Assignment Request Form</h1>
+
+                <div id="loginMessage" style="display:none; color:red;">Please log in or sign up to place the order.</div>
+
+                <div class="form-group">    
+                    <label for="assignmentType">Type of Assignment:</label>
+                    
+                    <select id="assignmentType" name="assignmentType" required>
+                    
+                        <option value="">Select Assignment Type</option>
+                    
+                        <option value="English Writing Based Assignments">English Writing Based Assignments</option>
+                    
+                        <option value="Research Paper (Thesis)">Research Paper (Thesis)</option>
+                    
+                        <option value="FYP Based">FYP Based</option>
+                    
+                        <option value="All Types of Presentations">All Types of Presentations</option>
+                    
+                        <option value="App Development">App Development</option>
+                    
+                        <option value="Game Development">Game Development</option>
+                    
+                        <option value="Web Development">Web Development</option>
+                    
+                        <option value="Content Writing for Any Platform">Content Writing for Any Platform</option>
+                    
+                        <option value="Research">Research</option>
+                    
+                        <option value="Semester/Term Project">Semester/Term Project</option>
+                    
+                        <option value="Professional Web App">Professional Web App</option>
+                    
+                        <option value="Technical Report">Technical Report</option>
+                    
+                        <option value="Lab Report">Lab Report</option>
+                    
+                        <option value="Case Study">Case Study</option>
+                    
+                        <option value="Mathematics/Physics Based Assignments">Mathematics/Physics Based Assignments</option>
+                    
+                        <option value="Programming Tutoring">Programming Tutoring (If you have already your task/assignment/project)</option>
+                    
+                        <option value="All Types of Programming Assignments (C/C++, Python, Java, JavaScript, Assembly Language etc)">All Types of Programming Assignments (C/C++, Python, Java, JavaScript, Assembly Language etc)</option>
+                    
+                        <option value="Article">Article</option>
+                    
+                        <option value="Review Paper">Review Paper</option>
+                    
+                        <option value="Creative Writing">Creative Writing</option>
+                    
+                    </select>
+                
+                </div>
+
+                
+                <div class="form-group-row" style="position: relative;
+                left: -96px;">
+
+                    <div class="form-group">
+                        <!-- <label for="daysUntilDue">Days Until Due:</label>
+                        <input type="number" id="daysUntilDue" name="daysUntilDue" required min="1"> -->
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="studentEmail">Your Email:</label>
+                        <input type="email" id="studentEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="exactDeadline">Exact Deadline:</label>
+                        <input type="datetime-local" id="exactDeadline" name="exactDeadline" required>
+                    </div>
+                </div>
+
+                
+                <div class="form-group-row">
+                    
+                    <div class="form-group">
+                        <!-- <label for="gradeDesired">Desired Grade:</label>
+                        <select id="gradeDesired" name="gradeDesired" required>
+                            <option value="">Select Desired Grade</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="Pass">Pass</option>
+                        </select> -->
+                    </div>
+
+                    
+                    <div class="form-group" style="position: relative;
+                    right: 152px;
+                    margin: revert-layer;">
+                        <label for="whatsapp" style="text-align: center;
+                        margin-top: 6px;">WhatsApp Number (Optional):</label>
+                        <input id="whatsapp" type="text" name="whatsapp"/>
+                    </div>
+                </div>
+
+                
+                <div id="programmingDetails" class="hidden">
+                    <div class="form-group">
+                        <label for="programmingLanguage">Preferred Programming Language:</label>
+                        <input type="text" id="programmingLanguage" name="programmingLanguage" placeholder="Enter programming language">
+                    </div>
+
+                
+                    <div id="webDevelopmentDetails" class="hidden">
+                        <div class="form-group">
+                            <label for="webDevelopmentType">Web Development Type:</label>
+                            <select id="webDevelopmentType" name="webDevelopmentType">
+                                <option value="">Select Type</option>
+                                <option value="Frontend">Front-End</option>
+                                <option value="Backend">Back-End</option>
+                                <option value="Full Stack">Full Stack Development</option>
+                            </select>
+                        </div>
+
+                
+                        <div id="fullStackDetails" class="hidden">
+                            <div class="form-group">
+                                <label for="fullStackFramework">Preferred Framework:</label>
+                                <select id="fullStackFramework" name="fullStackFramework">
+                                    <option value="">Select Framework</option>
+                                    <option value="MERN">MERN Stack</option>
+                                    <option value="MEAN">MEAN Stack</option>
+                                    <option value="Flask">Flask</option>
+                                    <option value="Django">Django</option>
+                                    <option value="Basic EJS">EJS Based</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="additionalDetails">Additional Details:</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Provide any additional details or requirements here..."></textarea>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="fileUploads">Google Drive File Link (Optional):</label>
+                    <input type="text" id="fileUploads" name="fileUploads">
+                </div>
+
+                
+                <div class="extra-options">
+                    <label for="topProgrammer">
+                        <input type="checkbox" id="topProgrammer" name="topProgrammer"> Top-level person required
+                    </label>
+                
+                    <br>
+                
+                    <label for="wellCommentedCode">
+                        <input type="checkbox" id="wellCommentedCode" name="wellCommentedCode"> Well-commented code required
+                    </label>
+                
+                    <br>
+                
+                    <label for="noOpenSource">
+                        <input type="checkbox" id="noOpenSource" name="noOpenSource"> No open-source or ready-made code allowed
+                    </label>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label style="position: relative; top: 12px;">Task Size:</label>
+               
+                    <div class="button-group" id="taskSizeButtons">
+                        <button type="button" data-size="extraSmall">Extra Small</button>
+                        <button type="button" data-size="small">Small</button>
+                        <button type="button" data-size="medium">Medium</button>
+                        <button type="button" data-size="large">Large</button>
+                        <button type="button" data-size="professional">Professional</button>
+                    </div>
+               
+                    <div id="taskSizeDetails" class="price-info"></div>
+               
+                    <input type="hidden" id="taskSize" name="taskSize" value="">
+               
+                </div>
+
+               
+                <div class="form-group">
+                    <label for="vivaPreparation">Need Viva Preparation?</label>
+              
+                    <select id="vivaPreparation" name="vivaPreparation">
+                        <option value="no">No</option>
+                        <option value="yes">Yes (15% increase in price)
+                             [We will contact you for the timings]
+                        </option>
+                    </select>
+              
+              
+                    <div id="vivaTiming" class="hidden">
+                        <label for="vivaTimingSelect">Preferred Timing (Tentative):</label>
+                        <select id="vivaTimingSelect" name="vivaTimingSelect">
+                            <option value="3-4">3-4 PM</option>
+                            <option value="4-5">4-5 PM</option>
+                            <option value="5-6">5-6 PM</option>
+                            <option value="5-6">Will decide later upon availability</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div id="priceDetails">
+                    <p id="priceMessage">Current Price: $<span id="currentPrice"></span></p>
+                </div>
+                
+              
+                <input type="file" name="file" accept="*/*" required>
+           
+                <button type="submit" class="submit-btn">Submit</button>
+            
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailInput = document.getElementById('studentEmail');
+            const form = document.querySelector('form');
+
+            emailInput.addEventListener('input', function() {
+                this.value = this.value.toLowerCase();
+            });
+
+            form.addEventListener('submit', function(event) {
+                emailInput.value = emailInput.value.toLowerCase();
+            });
+        });
+
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+    
+
+    <script>
+        const input = document.querySelector("#whatsapp");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            
+            geoIpLookup: function(success, failure) {
+                fetch('https://ipinfo.io?token=<YOUR_TOKEN>', { headers: { 'Accept': 'application/json' } })
+            
+                    .then((resp) => resp.json())
+            
+                    .then((resp) => {
+                        const countryCode = (resp && resp.country) ? resp.country : "us";
+                        success(countryCode);
+                    })
+                
+                    .catch(() => {
+                        success("us");
+                    });
+            
+            },
+
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        
+        });
+
+    </script>
+
+
+
+
+    <script>
+
+        $(document).ready(function() {
+            const assignmentTypeSelect = $('#assignmentType');
+            const programmingDetails = $('#programmingDetails');
+            const webDevelopmentDetails = $('#webDevelopmentDetails');
+            const fullStackDetails = $('#fullStackDetails');
+            const vivaPreparationSelect = $('#vivaPreparation');
+            const vivaTiming = $('#vivaTimingSelect');
+            const taskSizeDetails = $('#taskSizeDetails');
+            const taskSizeButtons = $('#taskSizeButtons button');
+            const taskSizeInput = $('#taskSize');
+            const daysUntilDueInput = $('#daysUntilDue');
+            const gradeDesiredInput = $('#gradeDesired');
+            const professionalLevelCheckbox = $('#professionalLevel');
+            const vivaRequiredCheckbox = $('#vivaRequired');
+            const topProgrammerCheckbox = $('#topProgrammer');
+            const vivaPreparationRadio = $('#vivaPreparation');
+            const totalCostDisplay = $('#totalCost');
+            const priceMessage = $('#priceMessage');
+            const currentPriceSpan = $('#currentPrice');
+
+            function showElement(element) {
+                element.removeClass('hidden').addClass('show');
+            }
+
+            function hideElement(element) {
+                element.removeClass('show').addClass('hidden');
+            }
+
+
+        assignmentTypeSelect.on('change', function() {
+            const selectedValue = $(this).val();
+    
+            if (['App Development', 'Game Development', 'Web Development'].includes(selectedValue)) {
+                showElement(programmingDetails);
+            } 
+            
+            else {
+                hideElement(programmingDetails);
+                hideElement(webDevelopmentDetails);
+                hideElement(fullStackDetails);
+            }
+
+            if (selectedValue === 'Web Development') {
+                showElement(webDevelopmentDetails);
+            } 
+            
+            else {
+                hideElement(webDevelopmentDetails);
+            }
+        });
+
+
+        $('#webDevelopmentType').on('change', function() {
+            if ($(this).val() === 'Full Stack') {
+                showElement(fullStackDetails);
+            } 
+            
+            else {
+                hideElement(fullStackDetails);
+            }
+        });
+
+
+        taskSizeButtons.on('click', function() {
+            taskSizeButtons.removeClass('active');
+            $(this).addClass('active');
+            const size = $(this).data('size');
+            taskSizeInput.val(size);
+
+            let priceInfo = '';
+            switch(size) {
+                
+                case 'extraSmall':
+                    priceInfo = '<b> Up to 3 short practice problems </b> <br> <br>✔️ 3 functions/outputs <br>✔️ Class (OOP) with 1-3 simple methods <br>✔️ Set of short practice tasks <br> <br> <b>Possible deliverables </b> <br> <br>☑️ Source code <br>☑️ Screenshots of outputs <br>☑️ Short answers to questions <br>';
+                    break;
+                
+                
+                case 'small':
+                    priceInfo = '<b> Up to 7 short practice problems, a simple program with up to 7 functions </b> <br> <br>✔️ Small user interface <br>✔️ Data visualization with 3-4 plots <br>✔️ Set of short practice tasks <br> <br> <b>Possible deliverables </b> <br> <br>☑️ Source code <br>☑️ Screenshots of outputs <br>☑️ Short answers to questions <br>';
+                    break;
+                
+                
+                case 'medium':
+                    priceInfo = '<b> Up to 12 practice problems, a small lab report, well-defined project or a landing page </b> <br> <br>✔️ Data visualization up to 7 plots <br>✔️ Small lab report <br>✔️ Compiler prototype for a simple language <br>✔️ Database with up to 10 tables <br>✔️ Simple console game <br>✔️ Simple algorithm for 1 scenario <br>✔️ simple model converted from a drawing <br>✔️ Data analysis project on 1 dataset <br> <br> <b>Possible deliverables </b> <br> <br>☑️ Source code <br>☑️ Screenshots of outputs <br>☑️ Detailed Report <br>';
+                    break;
+                
+                
+                case 'large':
+                    priceInfo = '<b> Large programming tasks or projects, extensive lab report </b> <br> <br>✔️ Extensive lab report <br>✔️ Simple game with UI <br>✔️ Web-based product with 1-2 scenarios <br>✔️ Application with 1-2 scenario <br>✔️ API <br>✔️ Responsive website of 2-4 pages <br>✔️ Model development from scratch <br>✔️ Data analysis project on 1 dataset <br>✔️ Data analysis project for a business problem based on 2-3 datasets <br> <br> <b>Possible deliverables </b> <br> <br>☑️ Source code <br>☑️ Screenshots of outputs <br>☑️ Detailed Report <br>☑️ Documentation <br>☑️ Presentation <br>';
+                    break;
+                
+                
+                case 'professional':
+                    priceInfo = '<b> Large programming tasks or projects, extensive lab report </b> <br> <br>✔️ Extensive lab report <br>✔️ Meduim Based game with UI <br>✔️ Web-based product with 1-2 scenarios <br>✔️ Application with 1-2 scenario <br>✔️ API <br>✔️ Responsive website of 4-8 pages <br>✔️ Model development from scratch <br>✔️ Data analysis project on 2-4 datasets <br>✔️ Data analysis project for a business problem based on 4-6 datasets <br> <br> <b>Possible deliverables </b> <br> <br>☑️ Source code <br>☑️ Screenshots of outputs <br>☑️ Detailed Report <br>☑️ Documentation <br>☑️ Presentation <br>';
+                    break;
+            }
+
+
+            $('#taskSizeDetails').html(priceInfo).fadeIn();
+            calculateTotalCost(); // Recalculate cost when task size changes
+        });
+
+
+        vivaPreparationSelect.on('change', function() {
+            if ($(this).val() === 'yes') {
+                showElement(vivaTiming);
+            } 
+            
+            else {
+                hideElement(vivaTiming);
+            }
+            
+            calculateTotalCost(); // Recalculate cost when viva preparation changes
+        });
+
+
+        function calculateTotalCost() {
+            const daysUntilDue = parseInt(daysUntilDueInput.val()) || 0;
+            const gradeDesired = gradeDesiredInput.val();
+            const basePrice = 30; // Base price for calculation
+
+            // Urgency Multiplier
+            let urgencyMultiplier = 1;
+            if (daysUntilDue <= 3) {
+                urgencyMultiplier = 2;
+            } 
+            
+            else if (daysUntilDue <= 7) {
+                urgencyMultiplier = 1.5;
+            }
+
+            // Grade Multiplier
+            let gradeMultiplier = 1;
+            if (typeof gradeDesired === 'string' && gradeDesired.toLowerCase() === 'a') {
+                gradeMultiplier = 1.5;
+            } 
+            
+            else if (typeof gradeDesired === 'string' && gradeDesired.toLowerCase() === 'b') {
+                gradeMultiplier = 1.2;
+            }
+
+            // Additional Costs
+            const professionalLevel = professionalLevelCheckbox.is(':checked');
+            const vivaRequired = vivaRequiredCheckbox.is(':checked');
+            const topProgrammer = topProgrammerCheckbox.is(':checked');
+            const vivaPreparation = vivaPreparationRadio.val();
+
+            const professionalLevelCost = professionalLevel ? basePrice * 0.3 : 0;
+            const vivaCost = vivaRequired ? basePrice * 0.2 : 0;
+            const topProgrammerCost = topProgrammer ? basePrice * 0.1 : 0;
+            const vivaPreparationCost = vivaPreparation === 'yes' ? basePrice * 0.60 : 0;
+
+            // Task Size Multipliers
+            const taskSize = taskSizeInput.val();
+            let taskSizeMultiplier = 1;
+            
+            switch (taskSize) {
+                
+                case 'extraSmall': taskSizeMultiplier = 0.2; break;
+                
+                case 'small': taskSizeMultiplier = 0.5; break;
+                
+                case 'medium': taskSizeMultiplier = 1.5; break;
+                
+                case 'large': taskSizeMultiplier = 2; break;
+                
+                case 'professional': taskSizeMultiplier = 3; break;
+            }
+
+
+            // Total Cost Calculation
+            const totalCost = basePrice * urgencyMultiplier * gradeMultiplier * taskSizeMultiplier + professionalLevelCost + vivaCost + topProgrammerCost + vivaPreparationCost;
+
+            currentPriceSpan.text(totalCost.toFixed(2));
+            priceMessage.fadeIn(); // Show price details to user
+        }
+
+
+        // Initial calculation on page load
+        calculateTotalCost();
+
+
+        $('#assignmentForm').on('submit', function(e) {
+            sessionStorage.removeItem('formData');
+            calculateTotalCost(); // Calculate total cost before form submission
+        });
+
+
+        // Prefill the form with data from sessionStorage if available
+        window.onload = function() {
+        const formDataString = sessionStorage.getItem('formData');
+            
+            if (formDataString) {
+                
+                try {
+                    
+                    const formData = JSON.parse(formDataString);
+                    $('#assignmentType').val(formData.assignmentType || '');
+                    
+                    // $('#daysUntilDue').val(formData.daysUntilDue || '');
+                    
+                    $('#exactDeadline').val(formData.exactDeadline || '');
+                    
+                    // $('#gradeDesired').val(formData.gradeDesired || '');
+                    
+                    $('#studentEmail').val(formData.email || '');
+
+                    $('#whatsapp').val(formData.whatsapp || '');
+                    
+                    $('#additionalDetails').val(formData.additionalDetails || '');
+                    
+                    $('#fileUploads').val(formData.fileUploads || '');
+                    
+                    $('#programmingLanguage').val(formData.programmingLanguage || '');
+                    
+                    $('#webDevelopmentType').val(formData.webDevelopmentType || '');
+                    
+                    $('#fullStackFramework').val(formData.fullStackFramework || '');
+                    
+                    $('#topProgrammer').prop('checked', formData.topProgrammer || false);
+                    
+                    $('#wellCommentedCode').prop('checked', formData.wellCommentedCode || false);
+                    
+                    $('#noOpenSource').prop('checked', formData.noOpenSource || false);
+                    
+                    $('#vivaPreparation').val(formData.vivaPreparation || 'no');
+                    
+                    // $('#vivaTimingSelect').val(formData.vivaTiming || 'Will decide later' || '3 to 4 PM' || '5 to 6 PM');
+                } 
+                
+                catch (error) {
+                    console.error('Error parsing formData from sessionStorage:', error);
+                }
+            }
+        }
+    });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "do-my-assignment-web-app",
+  "version": "1.0.0",
+  "description": "This is a full stack web app for my internship.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "build": "echo 'no build step necessary'"
+  },
+  "author": "Talha Khalid",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "googleapis": "^140.0.1",
+    "gridfs-stream": "^1.1.1",
+    "helmet": "^7.1.0",
+    "mongo-connect": "^0.0.6",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.4.3",
+    "multer": "^1.4.5-lts.1",
+    "node-mailer": "^0.1.1",
+    "nodemailer": "^6.9.13",
+    "passport": "^0.7.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "serve-favicon": "^2.5.0",
+    "session": "^0.1.0",
+    "transporter": "^0.0.1",
+    "views": "^1.0.2"
+  }
+}

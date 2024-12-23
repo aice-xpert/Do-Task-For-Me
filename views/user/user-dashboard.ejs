@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <meta name="description" content="All your assignments and tasks at one place 'Do Task For Me - Your Task Our Expertise'">
+    <link rel="stylesheet" href="./css/user/user-dashboard.css">
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+
+        /* Define CSS variables for light and dark modes */
+        :root {
+            --heading-color: #06234A;
+            --bg-color: #f0f0f0;
+            --text-color: #000;
+            --nav-bg-color: #333;
+            --nav-text-color: #fff;
+            --order-item-bg: #fff;
+            --order-item-hover-bg: #f1f2f6;
+            --order-cost-color: #000;
+        }
+
+        /* Dark mode variables */
+        [data-theme="dark"] {
+            --heading-color: white;
+            --bg-color: #1e1e1e;
+            --text-color: #fff;
+            --nav-bg-color: #000;
+            --nav-text-color: #fff;
+            --order-item-bg: #333;
+            --order-item-hover-bg: #444;
+            --order-cost-color: #f1c40f;
+            --link-color: #fff; /* Define link color for dark mode */
+        }
+
+        [data-theme="dark"] a {
+            color: var(--link-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--heading-color);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #06234A;
+            color: var(--nav-text-color);
+            padding: 10px 0;
+            height: 90px;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -11px;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin-right: 20px;
+        }
+
+        .navbar .nav-links li a {
+            color: var(--nav-text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #f1c40f;
+        }
+
+        .orders-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(358px, 20fr));
+            gap: 20px;
+            margin-top: 33px;
+            list-style-type: none;
+        }
+
+        .order-item {
+            background-color: var(--order-item-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .order-item:hover {
+            background-color: var(--order-item-hover-bg);
+        }
+
+        .order-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .order-details {
+            flex: 1;
+        }
+
+        .order-cost {
+            font-size: 0.65rem;
+            font-weight: bold;
+            color: var(--order-cost-color);
+        }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--nav-text-color);
+            font-size: 1.2rem;
+        }
+        
+        .payment-status.paid {
+            color: green;
+        }
+
+        .payment-status.unpaid {
+            color: red;
+        }
+
+        @media (max-width: 450px) {
+            .whatsapp-button {
+                width: 220px;
+            }
+
+            .main {
+                height: calc(100vh - 70px);
+                width: 100%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                padding: 40px 30px 30px 30px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .orders-list {
+                display: flex;
+                grid-template-columns: repeat(auto-fill, minmax(358px, 20fr));
+                gap: 20px;
+                margin-top: 33px;
+                list-style-type: none;
+                flex-wrap: wrap;
+            }
+
+            .main-container {
+                display: flex;
+                width: 100vw;
+                position: relative;
+                top: 70px;
+                z-index: 1;
+                width: 394px;
+                left: 13px;
+                font-size: 15px;
+            }
+
+            .report-container {
+                min-height: 300px;
+                max-width: 1150px;
+                width: 1140px;
+                position: relative;
+                left: -25px;
+                top: -70px;
+                margin: 70px auto 0px auto;
+                background-color: #f2efff;
+                border-radius: 30px;
+                box-shadow: 3px 3px 10px rgb(188, 188, 188);
+                padding: 0px 20px 20px 20px;
+            }           
+        }
+
+        @media (max-width: 396px) {
+            :root {
+                width: 105%;
+            }
+
+            .main-container {
+                display: flex;
+                width: 100vw;
+                position: relative;
+                top: 70px;
+                z-index: 1;
+                width: 357px;
+                left: -6px;
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="/"><img src="/images/logo2.png" alt="" width="90px" height="50px"></a></div>
+            <ul class="nav-links">
+                <li><a href="/form">Order Now</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-adjust"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container">
+        <h1 class="username-heading" id="usernameHeading" style="text-align: center; margin-top: 80px;"></h1>
+        <div class="main-container">
+    
+            <div class="main">
+               <div class="box-container">
+                    <!-- Add more boxes as needed -->
+                </div>
+                
+                <div class="report-container" style="background-color: #cfe3ff;">
+                    <div class="report-header">
+                        <h1 class="recent-Articles" style="color: #06234A;">Your Orders</h1>
+                    </div>
+               
+                    <ul class="orders-list" id="ordersList">
+                        <!-- Orders will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <script>
+
+
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme); // Save theme preference
+            console.log(`Theme switched to: ${newTheme}`);
+        }
+
+
+        async function fetchAssignments(email) {
+            try {
+                const response = await fetch(`/fetch-assignments?email=${email}`);
+                const assignments = await response.json();
+                const ordersList = document.getElementById('ordersList');
+                ordersList.innerHTML = '';
+
+                if (assignments.length > 0) {
+        
+                    assignments.forEach(assignment => {
+                        const li = document.createElement('li');
+                        li.classList.add('order-item');
+                        li.innerHTML = `
+                            
+                            <div class="order-card">
+                                <div class="order-details">
+                                    
+                                    <p><b><strong>📑 &nbsp</strong> ${assignment.assignmentType}</b></p>
+                                    <br>
+                                    <hr>
+                                    <br>        
+                                    <p><strong>Task ID:</strong> ${assignment._id}</p>
+                                    
+                                    <p><strong>Status:</strong> ${assignment.status}</p>
+                                    
+                                    <p class="payment-status ${assignment.payment_status === 'paid' ? 'paid' : 'unpaid'}">
+                                    
+                                        <strong>Payment Status:</strong> ${assignment.payment_status}
+                                    
+                                    </p>
+
+                                    <p><strong>Submitted On:</strong> ${new Date(assignment.createdAt).                             toLocaleString()}</p>
+
+                                    <p><strong>File (Uploaded by User) :</strong> <a href="${assignment.fileUrl}" target="_blank" style="text-decoration: none;">View File 🔗</a></p>
+
+                                    <p><strong>Order Details:</strong> <a href="/assignment-details?username=${encodeURIComponent(email)}&assignmentId=${encodeURIComponent(assignment._id)}" style="text-decoration: none;">View Order Details 🔗</a></p>
+               
+                                    <br>
+
+                                </div>
+                         
+                                <div class="order-cost">Team will contact you for the price</div>
+
+                            </div>
+                        `
+                        ;
+        
+                        ordersList.appendChild(li);
+                        
+                        // const assignmentLink = `https://localhost:3000/assignment-details?username=${encodeURIComponent(assignment.username)}&assignmentId=${encodeURIComponent(assignment._id)}`;
+
+
+
+
+
+
+                        // const message = `Hi, I have a query about the assignment. Here are the details:\n\n` +
+                        // `Task ID: ${assignment._id}\n` +
+                        // `Assignment Type: ${assignment.assignmentType}\n` +
+                        // `Status: ${assignment.status}\n` +
+                        // `Exact Deadline: ${assignment.exactDeadline}\n` +
+                        // `Additional Details: ${assignment.additionalDetails}\n` +
+                        // `Submitted On: ${new Date(assignment.createdAt).toLocaleString()}\n` +
+                        // `Email: ${assignment.email}\n` +
+                        // `Well Commented Code: ${assignment.wellCommentedCode}\n` +
+                        // `Viva Preparation: ${assignment.vivaPreparation}\n` +
+                        // `No Open Source: ${assignment.noOpenSource}\n` +
+                        // `Programming Language: ${assignment.programmingLanguage}`;
+                        
+                        // Encode the message
+                        // const encodedMessage = encodeURIComponent(message);
+
+                        // Set the WhatsApp link
+                        // const whatsappLink = `https://wa.me/+447769108567?text=${encodedMessage}`;
+                        
+                        // document.getElementById('whatsapp-link').setAttribute('href', whatsappLink);
+                    });
+                }
+                
+                else {
+                    const li = document.createElement('li');
+                    li.classList.add('order-item');
+                    li.textContent = 'No orders found.';
+                    ordersList.appendChild(li);
+                }
+            } 
+
+
+            catch (error) {
+                console.error('Error fetching assignments:', error.message);
+            }
+        }
+
+
+        // Function to start typing "Welcome to your Dashboard"
+        function typeWelcomeMessage() {
+            const usernameHeading = document.getElementById('usernameHeading');
+            const welcomeText = 'Welcome 🤞,  to your Dashboard !';
+            const typingSpeed = 60; // Speed of typing in milliseconds
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < welcomeText.length) {
+                    usernameHeading.textContent += welcomeText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                }
+            }
+
+            type();
+        }
+
+
+        // Apply saved theme on page load
+        window.onload = async() => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            console.log(`Applied saved theme: ${savedTheme}`);
+            typeWelcomeMessage();
+
+            const email = '<%= user.email %>'; // Replace with actual email from your backend template engine
+            fetchAssignments(email);
+        }
+
+
+        // Add event listener to the dark mode toggle button
+        document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
+    </script>
+
+</body>
+</html>

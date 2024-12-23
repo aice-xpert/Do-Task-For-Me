@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How we work</title>
+
+    <meta name="description" content="Our style and dedication to work for providing the best services to clients makes 'Do Task For Me - Your Task Our Expertise' different from others">
+
+  <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-63WD5GF493"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-63WD5GF493');
+	</script>
+
+
+    <link rel="stylesheet" href="./css/main/how-we-work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+</head>
+
+<style>
+
+       .navbar {
+          background-color: #06234A;
+          padding: 1rem;
+          transition: background-color 0.3s ease;
+        }
+        
+        .navbar:hover {
+          background-color: #06234A;
+        }
+        
+        .navbar .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .navbar .logo img {
+          width: 80px;
+          height: 80px;
+        }
+        
+        .navbar .nav-links {
+          list-style-type: none;
+          display: flex;
+          gap: 1rem;
+        }
+        
+        .navbar .nav-links li {
+          display: inline;
+        }
+        
+        .navbar .nav-links li a, .contact-btn {
+          color: #ecf0f1;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+        
+        .navbar .nav-links li a:hover, .contact-btn:hover {
+          color: #f39c12;
+        }
+
+        .btn--black-white {
+          background: #06234a;
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          margin-right: 280px;
+        }
+        
+        .btn--black-white:hover {
+          background: #06234a;
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+        }
+        
+        .section-cta {
+          background: white;
+          color: #fff;
+          padding: 3rem 0;
+          text-align: center;
+        }
+        
+        .contact-btn {
+          background-color: #e74c3c;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+          background-color: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+          .steps__tabs {
+            border-right: none;
+            border-bottom: 2px solid #f0f0f0;
+            flex-direction: column;
+            overflow-x: auto;
+          }
+          
+        }
+
+        @media (min-width: 1024px) {
+          .container {
+            max-width: 1220px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            bottom: 42px;
+            color: #06234A;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .section-cta {
+            padding-top: 110px;
+            background: white;
+            color: #06234A;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .contact-btn {
+            position: relative;
+            margin-right: 155px;
+            width: 144px;
+            margin-top: 36px;
+          }
+
+          .section-top-landing {
+            background: rgb(224, 223, 223);
+            color: #4139aa;
+            padding: 5rem 0;
+            text-align: center;
+            margin-top: 42px;
+          }
+
+          .steps__inner {
+            flex-direction: column;
+            margin-left: 28px;
+          }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Bebas Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+
+        @media (min-width: 1024px) {
+          .section-top-landing__heading h1 {
+            font-size: 68px;
+            font-style: normal;
+          }
+
+          .section h4 {
+            font-size: 24px;
+          }
+
+          .container h2 {
+            font-size: 44px;
+          }
+        }
+
+        .logo img {
+          width: 88px;
+          height: 50px;
+          margin-top: 5px;
+        }
+
+</style>
+
+<body>
+
+  <%- include("../partials/header.ejs") %>    
+  <%- include("../partials/whatsapp-contact.ejs") %>  
+  <%- include("../partials/cursor-effect.ejs") %>
+
+
+  <!-- <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="/images/logo.jpg" alt="Company Logo"></a>
+            <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="/work">How We Work</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+            <a href="/login-user" class="contact-btn">Manage Orders</a>
+        </div>
+    </nav> -->
+
+
+
+
+
+
+<div class="section section-top-landing" style="background-color: #06234A; color: white;">
+  <div class="container">
+    <div class="section-top-landing__inner">
+    
+      <div class="breadcrumbs">
+        <ul class="wrap clearfix">
+        </ul>
+      </div>
+    
+      <div class="section-top-landing__heading" style="color: white;">
+        <h1>How we work</h1>
+        <p class="section__subtitle">If you’re new to our service, take a look at how it works.</p>
+      </div>
+    
+    </div>
+  </div>
+</div>
+<%- include("../partials/circles-animation.ejs") %>
+
+
+
+
+
+
+<div class="section section-steps">
+
+  <div class="container" style="text-align: center;">
+    <h2>Placing your order: A short guide</h2>
+    <p><b>Take these steps you need to get a paper from us.</b></p>
+
+    <div class="steps__inner">
+
+      <div class="steps__tabs">
+
+        <div class="steps__tab"><b>Step 1:</b> Fill out the order form</div>
+        <div class="steps__tab"><b>Step 2:</b> Pay for your assignment</div>
+        <div class="steps__tab"><b>Step 3:</b> Stay in touch with your expert</div>
+        <div class="steps__tab"><b>Step 4:</b> Download the finished work</div>
+
+      </div>
+
+
+
+      <div>
+        <div class="step">
+          <h3>Fill out the order form</h3>
+          <p>Set your deadline, specify the number of pages, and provide all necessary instructions.</p>
+        </div>
+
+        <div class="step">
+          <h3>Pay for your assignment</h3>
+          <p>Submit the required sum using a debit or credit card. All payment data is encrypted for safety.</p>
+        </div>
+
+        <div class="step">
+          <h3>Stay in touch</h3>
+          <p>Communicate with your expert to check progress or remind them of any essential details.</p>
+        </div>
+
+        <div class="step">
+          <h3>Download the finished work</h3>
+          <p>Download the first draft via an email link. Approve or request an edit if necessary.</p>
+          <a href="/dashboard/orders/create/" class="btn btn--orange">Place an order</a>
+        </div>
+     
+      </div>
+    
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+
+
+
+<section class="section section-benefits">
+  <div class="container">
+    <h2>Why it’s a good idea to entrust us with your paper</h2>
+      <ol class="list list--orange-number">
+       
+        <h4>We select only the best experts</h4>
+        <p>All specialists pass several tests and regularly develop their skills.</p>
+              
+        <h4>We guarantee privacy</h4>
+        <p>We never disclose your personal information. Phone numbers and   email addresses are used only to communicate and deliver papers.</p>
+      
+        <h4>Our papers are 100% original</h4>
+        <p>We create each assignment from scratch, adapting the text to your academic needs.</p>
+       
+        <h4>We’ve got a money-back guarantee</h4>
+        <p>If we don’t meet your expectations, you can request a refund or a free revision.</p>
+        
+        <h4>We never stop at what we’ve already achieved</h4>
+        <p>We focus on making our service better, earning the trust and respect of our clients.</p>
+      
+        <br>
+        <div class="stat__value"><b>97.98%</b></div>
+        <span class="stat__text"><strong>of orders are delivered on time</strong></span>
+      
+      </ol>
+  </div>
+</section>
+
+
+
+
+
+
+<div class="section section-cta">
+  <div class="container">
+
+    <div class="section-cta__inner" style="color: #06234A;">
+      <h5 style="color: #06234A;">Now you know everything</h5>
+      <p style="color: #06234A;">Go ahead and let us help you deal with any troubling tasks.</p>
+      <a rel="nofollow" href="/form" class="btn btn--black-white">Place an order</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<%- include("../partials/footer.ejs") %>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <button class="scroll-to-top" data-observed-bg></button>
+    <div class="footer__top">
+      
+      <div class="footer__menu">
+        <p class="footer__menu__heading">Info</p>
+        <ul class="footer__menu__list">
+          
+          <li><a href="#" class="footer__menu__link" rel="nofollow">Contact us</a></li>
+          
+          <li><a href="#" class="footer__menu__link" rel="nofollow">Pricing</a></li>
+          
+          <li><a href="#" class="footer__menu__link" rel="nofollow">Our writers</a></li>
+          
+          <li><a href="#" class="footer__menu__link" rel="nofollow">FAQ</a></li>
+          
+          <li><a href="#" class="footer__menu__link" rel="nofollow">Progressive delivery</a></li>
+          
+          <li><a href="#" class="footer__menu__link">Blog</a></li>
+        
+        </ul>
+      
+      </div>
+      
+
+      <div class="footer__menu footer__menu--terms">
+        <p class="footer__menu__heading">Terms</p>
+        <ul class="footer__menu__list">
+      
+          <li><a href="#" class="footer__menu__link" rel="nofollow">Terms and conditions</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Guarantees</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Money back guarantee</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Revision policy</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Privacy policy</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Cookie policy</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Plagiarism-free guarantee</a></li>
+      
+          <li><a href="#" class="footer__menu__link">Social responsibility policy</a></li>
+      
+        </ul>
+      
+      </div>
+      
+
+      <div class="footer__accept-and-language">
+        <div class="footer__accept-and-language__wrapper">
+              <ul class="footer__accept" style="list-style: none;">
+                
+                <li class="footer__accept__item">
+                    <i class="fab fa-cc-mastercard fa-2x"></i>
+                </li>
+                
+                <li class="footer__accept__item">
+                    <i class="fab fa-cc-visa fa-2x"></i>
+                </li>
+                
+                <li class="footer__accept__item">
+                    <i class="fab fa-cc-amex fa-2x"></i>
+                </li>
+                
+                <li class="footer__accept__item">
+                    <i class="fab fa-cc-discover fa-2x"></i>
+                </li>
+
+              </ul>
+            
+        </div>
+      
+      </div>
+
+    </div>
+
+
+    
+    <div class="footer__bottom">
+      <div class="footer__company">
+    
+        <p class="footer__company__address">© 2024 Do Task for Me. All rights reserved.</p>
+   
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
